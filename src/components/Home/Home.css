@@ -1,0 +1,50 @@
+/* Home.css */
+
+/* Contenitore principale */
+.home-container {
+  display: flex;
+  flex-direction: column; /* Allinea le sezioni una sotto l'altra */
+  align-items: center; /* Centra il contenuto */
+  margin: 88px;
+}
+
+/* Stile per ogni sezione immagine e testo */
+.home-item {
+  display: flex;
+  align-items: center; /* Allinea verticalmente immagine e testo */
+  justify-content: space-between; /* Distanza tra immagine e testo */
+  margin-bottom: 40px; /* Spazio tra le sezioni */
+  max-width: 800px; /* Imposta la larghezza massima per le sezioni */
+  width: 100%;
+}
+
+/* Per la seconda sezione: invertire l'ordine (testo a sinistra e immagine a destra) */
+
+
+/* Stile per l'immagine */
+.home-item img {
+  width: 200px; /* Imposta la larghezza dell'immagine */
+  height: auto; /* Mantieni le proporzioni */
+  margin-right: 20px; /* Distanza tra l'immagine e il testo */
+}
+
+/* Stile per il testo */
+.home-item-text {
+  font-size: 18px;
+  color: white; 
+  max-width: 500px; /* Limita la larghezza del testo */
+}
+/* Imposta il gradiente come sfondo per l'intera pagina */
+html, body {
+  height: 100%; /* Assicura che l'altezza copra tutta la pagina */
+  margin: 0; /* Rimuove i margini di default */
+}
+
+body {
+  background: linear-gradient(to top, #000000, #333333); /* Gradiente dal nero al grigio scuro */
+  font-family: Arial, sans-serif; /* Puoi scegliere il font che preferisci */
+  color: white; /* Imposta il colore del testo a bianco per contrastare il gradiente */
+  justify-content: center;
+  align-items: center;
+   /* Almeno la lunghezza della finestra del browser */
+}
