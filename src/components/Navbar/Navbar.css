@@ -1,41 +1,108 @@
 .navbar {
   position: fixed;
   top: 0;
-  width: 100%;
-  background-color: #333;
+  width: 90%;
+  background: linear-gradient(90deg, #000000, #202020);
   color: white;
-
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px 35px;
+  margin: 10px auto;
+  left: 45px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  background-size: 400% 400%;
+  animation: gradient 8s ease infinite;
 }
 
-.navbar ul {
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.navbar-logo {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.2);
+}
+
+.navbar-logo img {
+  width: 150px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.navbar-links {
   list-style: none;
+  display: flex;
+  gap: 20px;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 
-.navbar li {
-  display: inline;
+.navbar-links li {
+  position: relative;
+  transition: transform 0.3s ease;
 }
 
-.navbar a {
-  color: white;
+.navbar-links a {
   text-decoration: none;
+  color: white;
+  font-size: 1rem;
   font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
-.navbar a:hover {
-  text-decoration: underline;
+.navbar-links a:hover {
+  transform: scale(1.2);
+  color: #ffffff;
 }
 
-/* Rimpicciolire ulteriormente il logo */
-.navbar img {
-  width: 180px;
-  height: auto;
-
+.navbar-links a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  bottom: 0;
+  left: -100%;
+  transition: all 0.3s ease;
 }
 
+.navbar-links a:hover::after {
+  left: 0;
+}
+
+.navbar-links .active {
+  background-color: rgb(41, 41, 41);
+  color: #fff9f9;
+  font-weight: bolder;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .navbar-logo {
+    position: relative;
+    display: inline-block;
+  }
+}

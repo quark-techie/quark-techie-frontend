@@ -6,22 +6,24 @@ import About from './components/About/About';
 import Contact from './components/Contacts/Contacts';
 import Foundations from './components/Foundations/Foundations';
 import Services from './components/Services/Services';
-
+import NotFound from './components/NotFound';
 
 const App = () => {
   return (
     <Router>
-    
       <Navbar />
       <div> 
-         <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Foundations" element={<Foundations />} />
-        <Route path="/Services" element={<Services />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-        </div>
+        <Routes>
+          {/* Definisci le rotte principali */}
+          <Route path="/" element={<Home />} />
+          <Route path="/Foundations" element={<Foundations />} />
+          <Route path="/Services" element={<Services />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
     </Router>
   );
 };

@@ -1,18 +1,29 @@
 import React from 'react';
+import './Services.css'; // Importa il file CSS per lo stile
 
-const Services = () => {
+
+const LogoCollection = () => {
+  const logos = [
+    { src: "/logo1.png", alt: "Logo 1", text: "Descrizione Logo 1" },
+    { src: "/logo2.png", alt: "Logo 2", text: "Descrizione Logo 2" },
+    { src: "/logo3.png", alt: "Logo 3", text: "Descrizione Logo 3" },
+    { src: "/logo4.png", alt: "Logo 4", text: "Descrizione Logo 4" },
+    { src: "/logo5.png", alt: "Logo 5", text: "Descrizione Logo 5" },
+    { src: "/logo6.png", alt: "Logo 6", text: "Descrizione Logo 6" },
+    { src: "/logo7.png", alt: "Logo 7", text: "Descrizione Logo 7" },
+    { src: "/logo8.png", alt: "Logo 8", text: "Descrizione Logo 8" },
+  ];
+
   return (
-    <div style={{ marginTop: '80px' }}>
-      <h1>Our Services</h1>
-      <p>Mostly the services we offer to our customers are 
-Analysis and Assessment: So basically the study of the current situation of Testing in the 
-company: flows, definition of use cases, frameworks, documentation, etc.
-Proposals and implementation: For the improvement of weak and critical 
-points identified at the QA level and in the team, both developers and analysts.
-Support: We in fact offer the necessary assistance to our team during production releases, testing, documentation and development control.
-Training: During work we train along with support and resolution of doubts during the actions, so that our team is well prepared.</p>
+    <div className="logo-collection">
+      {logos.map((logo, index) => (
+        <div className="logo-item" key={index}>
+          <img src={logo.src} alt={logo.alt} className="logo-image" />
+          <div className="logo-text">{logo.text}</div>
+        </div>
+      ))}
     </div>
   );
 };
 
-export default Services;
+export default LogoCollection;

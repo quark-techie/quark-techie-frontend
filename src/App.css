@@ -39,18 +39,3 @@
 
 /* App.css */
   
-/* Imposta il gradiente come sfondo per l'intera pagina */
-html, body {
-  height: 100%; /* Assicura che l'altezza copra tutta la pagina */
-  margin: 0; /* Rimuove i margini di default */
-}
-
-body {
-  background: linear-gradient(to bottom, #000000, #333333); /* Gradiente dal nero al grigio scuro */
-  font-family: Arial, sans-serif; /* Puoi scegliere il font che preferisci */
-  color: white; /* Imposta il colore del testo a bianco per contrastare il gradiente */
-  display: flex; /* Usa flexbox per centrare il contenuto se necessario */
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; /* Almeno la lunghezza della finestra del browser */
-}

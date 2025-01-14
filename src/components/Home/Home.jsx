@@ -1,33 +1,108 @@
-import React from 'react';
-import './Home.css'; // Importa il file CSS
+import React, { useState, useEffect, useRef } from 'react';
+import './Home.css';
+
+const Section = ({ title, title2, text, img, reverse, index, isBlue }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  const getColorClass = (index, isBlue) => {
+    if (isBlue) {
+      return 'blue-full';
+    }
+    return index % 2 === 0 ? 'blue' : 'yellow';
+  };
+
+  return (
+    <div
+      ref={sectionRef}
+      className={`section ${reverse ? 'reverse' : ''} ${isVisible ? 'visible' : ''}`}
+    >
+      <div className="text-container">
+        <h1 className={`title ${getColorClass(index, isBlue)}`}>
+          {title} {title2 && <span className="subtitle">{title2}</span>}
+        </h1>
+        <p className={`description ${isVisible ? 'complete' : ''}`}>
+          {text}
+        </p>
+      </div>
+      <div className="image-container">
+        <img src={img} alt={title2} className="image" />
+      </div>
+    </div>
+  );
+};
 
 const Home = () => {
+  const sections = [
+    {
+      title: "Quark",
+      title2: "Techie",
+      text: "Quality for the finest",
+      img: "/horizontal_original.png",
+      reverse: false,
+      isBlue: false,
+    },
+    {
+      title: "About",
+      title2: "Us",
+      text: "Quark Techie is now backed by more than 14 years of experience defining QA processes and methodologies.",
+      img: "/img1.jpg",
+      reverse: true,
+      isBlue: false,
+    },
+    {
+      title: "Our",
+      title2: "Services",
+      text: "Mostly the services we offer to our customers are.",
+      img: "/images/section3.jpg",
+      reverse: false,
+      isBlue: true,
+    },
+    {
+      title: "Contact",
+      title2: "Us",
+      text: "Get in touch with us for more information.",
+      img: "/images/section4.jpg",
+      reverse: true,
+      isBlue: false,
+    },
+  ];
+
   return (
-    <div className="home-container">
-      {/* Prima sezione: immagine a sinistra e testo a destra */}
-      <div className="home-item">
-        <img src="https://via.placeholder.com/200" alt="Placeholder 1" />
-        <div className="home-item-text">
-          <h2>About us          </h2>
-          <p>
-          Quark Techie is now backed by more than 14 years of experience defining QA processes and methodologies.
-To ensure us an efficient and agile implementation we usually work in a continuous coaching, structuring the testing process.
-
-We offer to our clients  some services of software quality consulting, we’re more precisely specialized in the study, definition and implementation of software testing services.
-          </p>
-        </div>
-      </div>
-
-      {/* Seconda sezione: immagine a destra e testo a sinistra */}
-      <div className="home-item">
-        <div className="home-item-text">
-          <h2>Titolo immagine 2</h2>
-          <p>
-            Un altro esempio di testo che si trova a sinistra dell'immagine. Puoi personalizzare ulteriormente con altri dettagli.
-          </p>
-        </div>
-        <img src="https://via.placeholder.com/200" alt="Placeholder 2" />
-      </div>
+    <div className="home">
+      {sections.map((section, index) => (
+        <Section
+          key={index}
+          title={section.title}
+          title2={section.title2}
+          text={section.text}
+          img={section.img}
+          reverse={section.reverse}
+          index={index}
+          isBlue={section.isBlue}
+        />
+      ))}
     </div>
   );
 };

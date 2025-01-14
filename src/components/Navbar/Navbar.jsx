@@ -1,33 +1,42 @@
-  import React from 'react';
-  import { Link } from 'react-router-dom';
-  import './Navbar.css'; // Importa il file CSS per lo stile
-import Foundations from './../Foundations/Foundations';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import './Navbar.css'; // Importa il file CSS per lo stile
 
-  const Navbar = () => {
-    return (
-      <nav className="navbar">
-        <ul>
-          <li>
-          <div><img src="/horizontal_original.png" alt="" /></div>
-          </li>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/Foundations">Foundations</Link>
-          </li>
-          <li>
-            <Link to="/Services">Our services</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-        </ul>
-      </nav>
-    );
-  };
+const Navbar = () => {
+  return (
+    <nav className="navbar">
+      <div className="navbar-logo">
+        <img src="/horizontal_original.png" alt="Logo" />
+      </div>
+      <ul className="navbar-links">
+        <li>
+          <NavLink exact to="/" activeClassName="active">
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/about" activeClassName="active">
+            About
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/Foundations" activeClassName="active">
+            Foundations
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/Services" activeClassName="active">
+            Our Services
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact" activeClassName="active">
+            Contact
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
+  );
+};
 
-  export default Navbar;
+export default Navbar;
