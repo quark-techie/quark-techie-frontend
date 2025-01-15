@@ -5,13 +5,14 @@ import Home from './components/Home/Home';
 import About from './components/About/About';
 import Contact from './components/Contacts/Contacts';
 import Foundations from './components/Foundations/Foundations';
-import Services from './components/Services/Services';
 import NotFound from './components/NotFound';
+import Services from './components/Services/Services';
 
 const App = () => {
   return (
     <Router>
       <Navbar />
+  
       <div> 
         <Routes>
           {/* Definisci le rotte principali */}

@@ -75,7 +75,7 @@ const Home = () => {
       title: "Our",
       title2: "Services",
       text: "Mostly the services we offer to our customers are.",
-      img: "/images/section3.jpg",
+      img: "OurServices.jpg",
       reverse: false,
       isBlue: true,
     },
