@@ -1,12 +1,13 @@
+/* Navbar principale */
 .navbar {
   position: fixed;
-  top: 0;
-  width: 90%;
+  top: 1rem;
+  left: 50%; /* Centrato orizzontalmente */
+  transform: translateX(-50%); /* Centro esatto della navbar */
+  width: 90%; /* Flessibile per dispositivi più piccoli */
   background: linear-gradient(90deg, #000000, #202020);
   color: white;
   padding: 10px 35px;
-  margin: 10px auto;
-  left: 45px;
   border-radius: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   z-index: 1000;
@@ -18,12 +19,14 @@
   animation: gradient 8s ease infinite;
 }
 
+/* Animazione sfondo della navbar */
 @keyframes gradient {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
+/* Logo della navbar */
 .navbar-logo {
   position: relative;
   display: inline-block;
@@ -36,11 +39,13 @@
 }
 
 .navbar-logo img {
-  width: 150px;
+  width: 100%; /* Logo dinamico che si adatta alla larghezza della navbar */
+  max-width: 150px; /* Dimensione massima per evitare che diventi troppo grande */
   height: auto;
   transition: transform 0.3s ease;
 }
 
+/* Menu dei link della navbar */
 .navbar-links {
   list-style: none;
   display: flex;
@@ -95,14 +100,33 @@
   transform: scale(1.1);
 }
 
+/* Media query per schermi più piccoli */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    padding: 10px;
+    flex-direction: column; /* Disposizione verticale */
+    padding: 20px;
+    width: 100%; /* Utilizza l'intera larghezza su schermi piccoli */
+    left: 0;
+    transform: translateX(0); /* Rimuove il centramento orizzontale */
   }
 
-  .navbar-logo {
-    position: relative;
-    display: inline-block;
+  .navbar-logo img {
+    max-width: 120px; /* Logo più piccolo per schermi piccoli */
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center; /* Centra i link nella colonna */
+  }
+
+  .navbar-links li {
+    width: 100%; /* Occupa tutta la larghezza su dispositivi mobili */
+    text-align: center; /* Centra i testi */
+  }
+
+  .navbar-links a {
+    font-size: 1.2rem; /* Aumenta la dimensione dei link su schermi piccoli */
+    padding: 10px 20px;
   }
 }

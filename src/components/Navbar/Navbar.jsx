@@ -20,13 +20,13 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/Foundations" activeClassName="active">
-            Foundations
+          <NavLink to="/Services" activeClassName="active">
+            Our Services
           </NavLink>
         </li>
         <li>
-          <NavLink to="/Services" activeClassName="active">
-            Our Services
+          <NavLink to="/Foundations" activeClassName="active">
+            Foundations
           </NavLink>
         </li>
         <li>

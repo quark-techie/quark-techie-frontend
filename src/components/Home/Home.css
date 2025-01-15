@@ -1,8 +1,9 @@
+/* Sezione principale */
 .section {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 50px 20px;
+  padding: 5vh 3vw; /* Usa unità relative per una buona spaziatura su schermi di diverse dimensioni */
   min-height: 100vh;
   background-color: rgb(247, 247, 247);
   opacity: 0;
@@ -10,27 +11,31 @@
   transition: opacity 1s ease, transform 1s ease;
 }
 
+/* Sezione con direzione inversa */
 .section.reverse {
   flex-direction: row-reverse;
   background-color: #eaeaea;
 }
 
+/* Sezione visibile con animazione */
 .section.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
+/* Contenitore del testo */
 .text-container {
   max-width: 50%;
-  padding: 20px;
+  padding: 5vh 2vw;
   text-align: center;
   transition: transform 1s ease, opacity 1s ease;
 }
 
+/* Titolo */
 .title {
-  font-size: 6rem;
+  font-size: 5vw; /* Dimensione dinamica in base alla larghezza della finestra */
   font-weight: bolder;
-  margin-bottom: 20px;
+  margin-bottom: 2vh;
   text-transform: uppercase;
   letter-spacing: 3px;
   animation: slideIn 1s ease-out;
@@ -41,8 +46,9 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+
 .description {
-  font-size: 4rem;
+  font-size: 2rem;
   color: #121212;
   line-height: 1.5;
   opacity: 0;
@@ -73,6 +79,7 @@
   color: #f8d300;
 }
 
+/* Animazione per il titolo e la descrizione */
 @keyframes slideIn {
   0% {
     transform: translateX(-100%);
@@ -84,10 +91,13 @@
   }
 }
 
+/* Contenitore dell'immagine */
 .image-container {
   max-width: 50%;
+  transition: transform 0.3s ease;
 }
 
+/* Immagine */
 .image {
   width: 100%;
   border-radius: 10px;
@@ -95,26 +105,33 @@
   transition: transform 0.3s ease;
 }
 
+/* Effetto hover sull'immagine */
 .image-container:hover .image {
   transform: scale(1.05);
 }
 
+/* Media query per dispositivi con schermi piccoli (max-width: 768px) */
 @media (max-width: 768px) {
   .section {
-    flex-direction: column;
+    flex-direction: column; /* Disposizione verticale per schermi piccoli */
+    padding: 5vh 2vw;
     text-align: center;
   }
 
   .text-container,
   .image-container {
-    max-width: 80%;
+    max-width: 80%; /* Occupa una maggiore larghezza in dispositivi piccoli */
   }
 
   .title {
-    font-size: 4rem;
+    font-size: 6rem; /* Aumenta la dimensione del font del titolo su schermi piccoli */
   }
 
   .description {
-    font-size: 2rem;
+    font-size: 2.5rem; /* Riduci la dimensione del font della descrizione per adattarlo ai dispositivi mobili */
+  }
+
+  .image {
+    border-radius: 15px; /* Aggiungi bordi più arrotondati per schermi più piccoli */
   }
 }
