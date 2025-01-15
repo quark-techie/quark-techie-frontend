@@ -5,14 +5,15 @@ import Home from './components/Home/Home';
 import About from './components/About/About';
 import Contact from './components/Contacts/Contacts';
 import Foundations from './components/Foundations/Foundations';
-import NotFound from './components/NotFound';
+import NotFound from './components/pages/NotFound';
 import Services from './components/Services/Services';
+import ScrollToTop from './components/hooks/scrollToTop';
 
 const App = () => {
   return (
     <Router>
       <Navbar />
-  
+      <ScrollToTop /> 
       <div> 
         <Routes>
           {/* Definisci le rotte principali */}

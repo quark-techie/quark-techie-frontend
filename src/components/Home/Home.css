@@ -93,7 +93,7 @@
 
 /* Contenitore dell'immagine */
 .image-container {
-  max-width: 50%;
+  max-width: 50rem;
   transition: transform 0.3s ease;
 }
 

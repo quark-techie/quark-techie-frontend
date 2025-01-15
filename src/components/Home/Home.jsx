@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Home.css';
+import Footer from './Footer/Footer';
 
 const Section = ({ title, title2, text, img, reverse, index, isBlue }) => {
   const [isVisible, setIsVisible] = useState(false);
@@ -80,10 +81,10 @@ const Home = () => {
       isBlue: true,
     },
     {
-      title: "Contact",
-      title2: "Us",
+      title: "Foundations",
+      title2: "",
       text: "Get in touch with us for more information.",
-      img: "/images/section4.jpg",
+      img: "/Foundations.jpg",
       reverse: true,
       isBlue: false,
     },
@@ -103,6 +104,8 @@ const Home = () => {
           isBlue={section.isBlue}
         />
       ))}
+            <Footer /> {/* Aggiungi il Footer qui */}
+
     </div>
   );
 };
