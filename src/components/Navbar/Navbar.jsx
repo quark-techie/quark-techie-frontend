@@ -1,8 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './Navbar.css'; // Importa il file CSS per lo stile
+import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ scrollToFooter }) => {
+  const handleContactClick = (e) => {
+    e.preventDefault();
+    scrollToFooter();
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-logo">
@@ -26,13 +31,17 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink to="/Foundations" activeClassName="active">
-            Foundations
+            Our Foundations
           </NavLink>
         </li>
         <li>
-          <NavLink to="/contact" activeClassName="active">
+          <a
+            href="#"
+            onClick={handleContactClick}
+            className="contact-link"
+          >
             Contact
-          </NavLink>
+          </a>
         </li>
       </ul>
     </nav>

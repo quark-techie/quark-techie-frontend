@@ -10,6 +10,7 @@
   animation: slide-in 1s ease-out forwards; /* Animazione di ingresso per la collezione di loghi */
 }
 
+
 /* Logo items: design dinamico */
 .logo-item {
   position: relative;
@@ -100,7 +101,9 @@
   justify-content: space-between;
   gap: 20px;
   animation: slide-in 1s ease-out forwards;
+
 }
+
 
 .service {
   display: flex;
@@ -118,8 +121,7 @@
   animation: slide-in 1s ease-out forwards;
   animation-delay: 0.3s;
 }
-
-.service:hover {
+.service:hover{
   transform: scale(1.05);
 }
 

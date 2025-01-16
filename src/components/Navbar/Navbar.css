@@ -117,12 +117,12 @@
   .navbar-links {
     flex-direction: column;
     gap: 10px;
-    align-items: center; /* Centra i link nella colonna */
+    align-items: center;
   }
 
   .navbar-links li {
     width: 100%; /* Occupa tutta la larghezza su dispositivi mobili */
-    text-align: center; /* Centra i testi */
+    text-align: center;
   }
 
   .navbar-links a {

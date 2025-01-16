@@ -1,10 +1,9 @@
-// Footer.js
 import React from 'react';
 import './Footer.css'; // Importiamo un file CSS per il footer
 
-const Footer = () => {
+const Footer = React.forwardRef((props, ref) => {
   return (
-    <div className="footer">
+    <div className="footer" ref={ref}> {/* Aggiungi il ref al div del footer */}
       <div className="footer-content">
         <p className="footer-text">© 2025 Quark Techie. All rights reserved.</p>
         <p className="footer-contact">
@@ -13,6 +12,6 @@ const Footer = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Footer;
