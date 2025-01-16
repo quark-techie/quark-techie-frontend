@@ -8,6 +8,7 @@ import Services from './components/Services/Services';
 import WorkingProcess from './components/WorkingProcess/WorkingProcess'; // Importa WorkingProcess
 import NotFound from './components/pages/NotFound';
 import Footer from './components/Home/Footer/Footer';
+import ScrollToTop from './components/hooks/scrollToTop';
 
 const App = () => {
   const footerRef = useRef(null); // Crea un riferimento per il footer
@@ -21,6 +22,7 @@ const App = () => {
   return (
     <Router>
       <Navbar scrollToFooter={scrollToFooter} /> {/* Passa la funzione al Navbar */}
+      <ScrollToTop/>
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
