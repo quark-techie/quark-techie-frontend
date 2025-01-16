@@ -3,7 +3,7 @@ import './Services.css'; // Importa il file CSS per lo stile
 
 const Services = () => {
   const logos = [
-    { src: "/logo1.png", alt: "Logo 1", text: " Cypress" },
+    { src: "/logo1.png", alt: "Logo 1", text: "Cypress" },
     { src: "/logo2.png", alt: "Logo 2", text: "Azure DevOps" },
     { src: "/logo3.png", alt: "Logo 3", text: "Atlassian" },
     { src: "/logo4.png", alt: "Logo 4", text: "Docker" },
@@ -42,7 +42,7 @@ const Services = () => {
               <div>
                 <h3>Support</h3>
                 <p>
-                  Assistance to the team during production releases, testing, documentation and development control.
+                  Assistance to the team during production releases, testing, documentation, and development control.
                 </p>
               </div>
             </div>
@@ -58,7 +58,8 @@ const Services = () => {
           </div>
         </div>
       </div>
-      <h1 className='toolsAndFramework'>Tools and frameworks</h1>
+
+      <h1 className='toolsAndFramework'>Tools and Frameworks</h1>
       <div className="logo-collection">
         {logos.map((logo, index) => (
           <div className="logo-item" key={index}>

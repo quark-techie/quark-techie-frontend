@@ -1,0 +1,170 @@
+/* General Container */
+.working-process-container {
+    padding: 60px 20px;
+    background-color: #f8f8f8;  /* Sfondo grigio chiaro */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #121212;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Titolo "Our Working Process" */
+.working-process-header {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 1rem;  /* Aggiunto per spostare il titolo più giù */
+}
+
+.working-process-header h1 {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    color: #121212;  /* Colore nero */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    color: #444444;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+/* Steps Styling */
+.working-process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 900px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.steps-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.step {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 45%;
+}
+
+.step h2 {
+    font-size: 1.8rem;
+    color: #816e00;
+    letter-spacing: 1px;
+    transform: none !important; /* Assicurati che non ci sia trasformazione al passaggio del mouse */
+}
+
+.step p {
+    font-size: 1.1rem;
+    color: #363636;
+    line-height: 1.6;
+    opacity: 0.9;
+    transform: none !important; /* Disabilita ogni effetto di trasformazione sui paragrafi */
+}
+
+/* Why Quark Techie Section */
+.why-quark-techie {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+}
+
+/* Titolo "Why Quark Techie" */
+.why-quark-techie h2 {
+    font-size: 2.2rem;
+    color: #121212;  /* Colore nero */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    transform: none !important; /* Rimuovi effetti hover sul titolo */
+}
+
+.why-quark-techie p {
+    font-size: 1.1rem;
+    color: #363636;
+    line-height: 1.6;
+    opacity: 0.9;
+    transform: none !important; /* Disabilita qualsiasi effetto hover sul paragrafo */
+}
+
+/* Why Quark Techie Details */
+.why-quark-techie-details {
+    display: flex;
+    justify-content: space-between;  /* Allinea orizzontalmente */
+    gap: 40px;  /* Distanza tra i punti */
+    max-width: 900px;
+    width: 100%;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.why-quark-techie-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.why-quark-techie-item h3 {
+    font-size: 1.8rem;
+    color: #f8d300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transform: none !important; /* Disabilita ogni effetto hover su h3 */
+}
+
+.why-quark-techie-item p {
+    font-size: 1.1rem;
+    color: #363636;
+    line-height: 1.6;
+    opacity: 0.9;
+    transform: none !important; /* Disabilita qualsiasi effetto hover sul paragrafo */
+}
+
+/* Rimozione completa degli hover per tutto il testo */
+.step:hover h2,
+.step:hover p,
+.why-quark-techie-item:hover h3,
+.why-quark-techie-item:hover p {
+    transform: none !important;  /* Rimuovi ogni effetto di ingrandimento o cambiamento */
+}
+
+/* Responsività */
+@media (max-width: 768px) {
+    .steps-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .step {
+        width: 100%;
+    }
+
+    .why-quark-techie {
+        width: 90%;
+    }
+
+    .why-quark-techie-details {
+        flex-direction: column;  /* In modalità mobile, i punti si dispongono in colonna */
+        gap: 20px;
+    }
+
+    .why-quark-techie-item {
+        width: 100%;  /* Ogni elemento occupa tutta la larghezza */
+        padding: 20px;
+    }
+}

@@ -1,4 +1,48 @@
-/* LogoCollection.css */
+/* Servizi: Aggiungere effetto hover */
+.service {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+  background: #dbd9d9;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  width: 45%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  animation: slide-in 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* Effetto hover: Ingrandisce il blocco e aggiunge ombra */
+.service:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Aggiunta di ombra più evidente */
+}
+
+/* Icone dei servizi */
+.service .icon {
+  font-size: 2rem;
+  color: #517575;
+  flex-shrink: 0;
+}
+
+/* Titolo del servizio */
+.service h3 {
+  font-size: 3rem;
+  text-align: center;
+  color: #121212;
+  margin-bottom: 10px;
+}
+
+/* Descrizione del servizio */
+.service p {
+  font-size: 1.5rem;
+  color: black;
+  line-height: 1.5;
+}
 
 /* Layout dinamico della collezione di loghi */
 .logo-collection {
@@ -9,7 +53,6 @@
   justify-items: center;
   animation: slide-in 1s ease-out forwards; /* Animazione di ingresso per la collezione di loghi */
 }
-
 
 /* Logo items: design dinamico */
 .logo-item {
@@ -63,6 +106,14 @@
   .logo-item {
     animation-delay: 0.5s; /* Ritardo maggiore per effetto più fluido */
   }
+
+  .services-list {
+    flex-direction: column; /* Colonna su schermi piccoli */
+  }
+
+  .service {
+    width: 100%; /* Aumenta la larghezza dei servizi */
+  }
 }
 
 /* Animazione per il "slide-in" */
@@ -101,9 +152,7 @@
   justify-content: space-between;
   gap: 20px;
   animation: slide-in 1s ease-out forwards;
-
 }
-
 
 .service {
   display: flex;
@@ -121,8 +170,10 @@
   animation: slide-in 1s ease-out forwards;
   animation-delay: 0.3s;
 }
-.service:hover{
+
+.service:hover {
   transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Aggiunta di ombra più evidente */
 }
 
 .service .icon {
@@ -142,17 +193,6 @@
   font-size: 1.5rem;
   color: black;
   line-height: 1.5;
-}
-
-/* Media query per dispositivi mobili */
-@media (max-width: 768px) {
-  .services-list {
-    flex-direction: column; /* Colonna su schermi piccoli */
-  }
-
-  .service {
-    width: 100%; /* Aumenta la larghezza dei servizi */
-  }
 }
 
 /* Impostazioni di sfondo e stile globale */

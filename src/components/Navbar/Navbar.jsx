@@ -35,6 +35,11 @@ const Navbar = ({ scrollToFooter }) => {
           </NavLink>
         </li>
         <li>
+          <NavLink to="/working-process" activeClassName="active"> {/* Aggiungi il link per Working Process */}
+            Working Process
+          </NavLink>
+        </li>
+        <li>
           <a
             href="#"
             onClick={handleContactClick}

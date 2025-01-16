@@ -4,9 +4,9 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Foundations from './components/Foundations/Foundations';
-import NotFound from './components/pages/NotFound';
 import Services from './components/Services/Services';
-import ScrollToTop from './components/hooks/scrollToTop';
+import WorkingProcess from './components/WorkingProcess/WorkingProcess'; // Importa WorkingProcess
+import NotFound from './components/pages/NotFound';
 import Footer from './components/Home/Footer/Footer';
 
 const App = () => {
@@ -21,13 +21,13 @@ const App = () => {
   return (
     <Router>
       <Navbar scrollToFooter={scrollToFooter} /> {/* Passa la funzione al Navbar */}
-      <ScrollToTop />
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Foundations" element={<Foundations />} />
           <Route path="/Services" element={<Services />} />
           <Route path="/about" element={<About />} />
+          <Route path="/working-process" element={<WorkingProcess />} /> {/* Aggiungi WorkingProcess */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

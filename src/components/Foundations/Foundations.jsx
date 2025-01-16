@@ -1,16 +1,41 @@
-import React from 'react';
+import React from "react";
+import "./Foundations.css"; // Importa lo stile CSS per personalizzare il design
 
-const Foundations = () => {
+const OurFoundations = () => {
+  const foundations = [
+    {
+      title: "Commitment",
+      description: "We are committed to delivering a high-quality, error-free product that meets the needs of our users. Our dedication to excellence drives every decision and ensures customer satisfaction.",
+    },
+    {
+      title: "Satisfied users",
+      description: "We strive to create satisfied users and customers by consistently enhancing the user experience. Our goal is to provide intuitive, reliable, and enjoyable solutions.",
+    },
+    {
+      title: "Stability",
+      description: "Ensuring stability and correct software behavior is at the core of what we do. We prioritize dependable performance to build trust and reliability.",
+    },
+    {
+      title: "Improving the day-to-day work",
+      description: "We focus on improving the day-to-day work of our team and our customers. By fostering a supportive environment and delivering dependable solutions, we ensure reassurance and satisfaction for everyone involved.",
+    },
+  ];
+
   return (
-    <div style={{ marginTop: '80px' }}>
-      <h1>Foundations</h1>
-      <p>Our most important principles are 
-commitment to delivering a quality error-free product, because for us it is really important that the software we control is infallible, easily readable and make our clients happy and satisfied.
-improve the experience of our users and customers by trying to work on this every day, learning what makes them happy and satisfied.
-every day with our work we try to ensure that the software we work on is stable and works correctly.
-we improve the working conditions of our workers every day, because if they are well they will be able to satisfy customers more easily.</p>
+    <div className="our-foundations">
+      <h1>Our Foundations</h1>
+      <div className="foundations-list">
+        {foundations.map((item, index) => (
+          <div key={index} className="foundation-item">
+            <div className="foundation-content">
+              <h2>{item.title}</h2>
+              <p>{item.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
-export default Foundations;
+export default OurFoundations;

@@ -14,7 +14,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    max-width: 1000px;  /* Adjust the width for a more compact layout */
+    max-width: 1000px;
     width: 100%;
     padding: 40px;
     background-color: #ffffff;
@@ -23,9 +23,9 @@
     text-align: left;
 }
 
-/* Prima Sezione - Aggiungi margine sopra */
+/* First Section */
 .about-item:first-of-type {
-    margin-top: 20px; /* Aggiungi un margine sopra per spostare la sezione verso il basso */
+    margin-top: 20px;
 }
 
 /* Each Section */
@@ -34,7 +34,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 30px; /* Aumenta la distanza tra le sezioni */
+    margin-bottom: 30px;
     padding: 20px 0;
 }
 
@@ -47,37 +47,38 @@
 .about-text {
     max-width: 50%;
     padding-right: 20px;
-    opacity: 0;  /* Imposta l'opacità iniziale a 0 per l'animazione */
-    animation: fadeInFromLeft 1.2s forwards;  /* Animazione del testo che entra da sinistra, durata aumentata */
+    opacity: 0;
+    animation: fadeInFromLeft 1.2s forwards;
 }
 
 .about-title {
-    font-size: 2.2rem; /* Font size per una migliore lettura */
+    font-size: 1.8rem; /* Ridotto il font size */
     font-weight: 600;
     color: #000000;
-    margin-bottom: 30px; /* Aumenta la distanza tra il titolo e il testo sottostante */
+    margin-bottom: 15px; /* Ridotto margine tra titolo e descrizione */
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     position: relative;
     font-family: 'Roboto', sans-serif;
+    white-space: nowrap; /* Impedisce il ritorno a capo */
 }
 
 .about-title::before {
     content: '';
     position: absolute;
-    width: 405px; /* Riduci la larghezza della linea sottostante */
+    width: 250px; /* Linea gialla più lunga */
     height: 4px;
     background-color: #f8d300;
     bottom: -10px;
-    left: 42.5%;
+    left: 50%;
     transform: translateX(-50%);
 }
 
 .about-description {
-    font-size: 1.1rem; /* Font leggermente più piccolo per una lettura migliore */
+    font-size: 1.2rem;
     color: #363636;
-    line-height: 1.6;
-    margin-top: 20px; /* Aggiungi distanza tra il testo e la descrizione */
+    line-height: 1.7;
+    margin-top: 20px;
     margin-bottom: 20px;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -86,7 +87,7 @@
 /* Animazione per il testo che entra da sinistra */
 @keyframes fadeInFromLeft {
     from {
-        transform: translateX(-50px); /* Movimento da sinistra */
+        transform: translateX(-50px);
         opacity: 0;
     }
     to {
@@ -97,9 +98,9 @@
 
 /* Image Styling */
 .about-image {
-    max-width: 35%;  /* Riduci la dimensione dell'immagine */
-    opacity: 0;  /* Imposta l'opacità iniziale a 0 per l'animazione */
-    animation: fadeInFromLeft 1.2s forwards;  /* Animazione per l'entrata da sinistra, durata aumentata */
+    max-width: 35%;
+    opacity: 0;
+    animation: fadeInFromLeft 1.2s forwards;
 }
 
 .about-img {
@@ -107,23 +108,12 @@
     height: auto;
     border-radius: 8px;
     object-fit: cover;
-    transition: transform 0.5s ease-in-out; /* Transizione più lunga per effetto hover */
-}
-/* Animazione per le immagini in entrata (da sinistra) */
-@keyframes fadeInFromLeft {
-    from {
-        transform: translateX(-50px); /* L'immagine parte da sinistra */
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+    transition: transform 0.5s ease-in-out;
 }
 
 /* Effetto hover per ingrandire l'immagine */
 .about-img:hover {
-    transform: scale(1.05); /* Aumenta leggermente la dimensione al passaggio del mouse */
+    transform: scale(1.05);
 }
 
 /* Responsiveness */
@@ -145,14 +135,12 @@
     }
 
     .about-image {
-        max-width: 80%;  /* Aumenta la dimensione dell'immagine su schermi piccoli */
+        max-width: 80%;
         margin-top: 20px;
     }
 
     .about-title {
-        font-size: 1.8rem; /* Adatta la dimensione del font per schermi più piccoli */
-        white-space: nowrap;
-
+        font-size: 1.6rem; /* Font ridotto sui dispositivi mobili */
     }
 
     .about-description {
