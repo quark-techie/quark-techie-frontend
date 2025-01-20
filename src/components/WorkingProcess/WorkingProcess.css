@@ -15,12 +15,15 @@
     text-align: center;
     margin-bottom: 20px;
     margin-top: 1rem;  /* Aggiunto per spostare il titolo più giù */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .working-process-header h1 {
     font-size: 3.5rem;
     letter-spacing: 2px;
-    color: #121212;  /* Colore nero */
+    color: #333;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -39,6 +42,7 @@
     max-width: 900px;
     width: 100%;
     margin-top: 30px;
+    align-items: center;
 }
 
 .steps-row {
@@ -46,6 +50,7 @@
     justify-content: space-between;
     gap: 40px;
     margin-bottom: 20px;
+    justify-content: center;
 }
 
 .step {
@@ -54,11 +59,12 @@
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     width: 45%;
+    
 }
 
 .step h2 {
     font-size: 1.8rem;
-    color: #816e00;
+    color: #252525;
     letter-spacing: 1px;
     transform: none !important; /* Assicurati che non ci sia trasformazione al passaggio del mouse */
 }
@@ -80,6 +86,8 @@
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Titolo "Why Quark Techie" */
@@ -109,6 +117,7 @@
     width: 100%;
     margin-top: 50px;
     padding: 20px;
+    justify-content: center;
 }
 
 .why-quark-techie-item {
@@ -121,7 +130,7 @@
 
 .why-quark-techie-item h3 {
     font-size: 1.8rem;
-    color: #f8d300;
+    color: #363636;
     text-transform: uppercase;
     letter-spacing: 1px;
     transform: none !important; /* Disabilita ogni effetto hover su h3 */
@@ -135,13 +144,6 @@
     transform: none !important; /* Disabilita qualsiasi effetto hover sul paragrafo */
 }
 
-/* Rimozione completa degli hover per tutto il testo */
-.step:hover h2,
-.step:hover p,
-.why-quark-techie-item:hover h3,
-.why-quark-techie-item:hover p {
-    transform: none !important;  /* Rimuovi ogni effetto di ingrandimento o cambiamento */
-}
 
 /* Responsività */
 @media (max-width: 768px) {
@@ -168,3 +170,18 @@
         padding: 20px;
     }
 }
+
+ /* Effetto hover per gli item */
+ .step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  }
+
+    .why-quark-techie-item:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  }

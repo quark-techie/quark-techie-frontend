@@ -87,6 +87,13 @@ const Home = () => {
       reverse: true,
       isBlue: false,
     },
+    {
+      title: "Working Process",
+      text: "We follow a structured and thorough process to ensure top-notch quality in every project.",
+      img: "/working_process.jpg",
+      reverse: false,
+      isBlue: true,
+    },
   ];
 
   return (

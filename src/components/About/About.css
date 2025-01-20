@@ -1,4 +1,5 @@
 /* General Container */
+
 .about-container {
     display: flex;
     justify-content: center;
@@ -114,6 +115,20 @@
 /* Effetto hover per ingrandire l'immagine */
 .about-img:hover {
     transform: scale(1.05);
+}
+
+/* Upgrade the h1 About Us title */
+.about-content h1 {
+    font-size: 3rem; /* Increase the font size */
+    color: #333; /* Darker color for better contrast */
+    margin-bottom: 15px; /* Add some space below the title */
+    text-align: center; /* Center align the text */
+    font-weight: bold; /* Make the text bold */
+    text-transform: uppercase; /* Uppercase letters */
+    letter-spacing: 2px; /* Add some letter spacing */
+    border-bottom: 2px solid #90BE6D; /* Add a bottom border */
+    padding-bottom: 10px; /* Add some padding below the text */
+    margin-top: 40px;
 }
 
 /* Responsiveness */

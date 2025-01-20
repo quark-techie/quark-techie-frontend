@@ -33,7 +33,7 @@
 .service h3 {
   font-size: 3rem;
   text-align: center;
-  color: #121212;
+  color: #333;
   margin-bottom: 10px;
 }
 
@@ -139,7 +139,7 @@
 /* Titolo servizi */
 .our-services h2 {
   font-size: 2.5rem;
-  color: black;
+  color: #333;
   margin-bottom: 30px;
   margin-top: 6rem;
   font-size: calc(1.5rem + 2vmin); /* Dimensione del titolo dinamica */
@@ -201,6 +201,7 @@ body {
 }
 
 .toolsAndFramework {
+  color: #333;
   font-size: 2.5rem;
   text-align: center;
   margin-top: 4rem;

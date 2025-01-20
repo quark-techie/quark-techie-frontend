@@ -7,6 +7,7 @@ const About = () => {
       <div className="about-content">
         <div className="about-item">
           <div className="about-text">
+            <h1>About Us</h1>
             <h2 className="about-title">Experience and Expertise in QA</h2>
             <p className="about-description">
               Quark Techie is an energetic and progressive company with over 14 years of experience in software quality assurance. In this time, we've developed comprehensive QA processes and methodologies to address the ever-evolving needs of the industry.

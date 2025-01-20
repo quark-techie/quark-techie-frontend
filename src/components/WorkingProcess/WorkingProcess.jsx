@@ -15,31 +15,46 @@ const WorkingProcess = () => {
       <section className="working-process-steps">
         <div className="steps-row">
           <div className="step">
-            <h2>1. Planning</h2>
+            <h2>Consulting</h2>
             <p>
-              We begin by analyzing your project's scope, requirements, and desired outcomes. We work with your team to outline a detailed strategy.
+            · Assessment <br />
+· KPI & metrics <br />
+· Process modeling <br />
+· Coaching
+
             </p>
           </div>
           <div className="step">
-            <h2>2. Design</h2>
+            <h2>Functional</h2>
             <p>
-              Our team then moves into the design phase, creating a scalable testing strategy, testing environments, and frameworks tailored to your needs.
+            · Testing Plan <br />
+· Testing Cycles <br />
+· Test Management <br />
+· Bug Reporting
+
             </p>
           </div>
         </div>
 
         <div className="steps-row">
           <div className="step">
-            <h2>3. Implementation</h2>
+            <h2>Automation</h2>
             <p>
-              Once everything is planned and designed, we implement the necessary tools and frameworks, focusing on automation and continuous integration.
+            · ROI <br />
+· Tools & Frameworks <br />
+· Shifting Left <br />
+· DevOps Integration
+
             </p>
           </div>
           <div className="step">
-            <h2>4. Testing</h2>
+            <h2>Performance</h2>
             <p>
-              We conduct thorough testing, including functional, performance, and security tests to ensure that everything works as intended.
-            </p>
+            · Technical architecture <br />
+· Environments & Data <br />
+· Test parameterization <br />
+· Non functional testing
+</p>
           </div>
         </div>
       </section>
@@ -57,19 +72,19 @@ const WorkingProcess = () => {
         <div className="why-quark-techie-item">
           <h3>Expertise</h3>
           <p>
-            Our team brings deep industry knowledge and a proven track record of delivering outstanding results across diverse sectors.
-          </p>
+          Our team is an expert in QA methodologies, ensuring flawless software performance.
+</p>
         </div>
         <div className="why-quark-techie-item">
           <h3>Customization</h3>
           <p>
-            We tailor our solutions to your specific needs, ensuring that each project is designed to meet your unique requirements.
-          </p>
+          Tailored QA strategies crafted to fit your tech environment and project requirements. 
+</p>
         </div>
         <div className="why-quark-techie-item">
           <h3>Communication</h3>
           <p>
-            We prioritize clear and open communication throughout every stage of the project, keeping you informed and involved.
+          Direct communication channels for seamless collaboration and feedback integration.
           </p>
         </div>
       </section>

@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #f2f2f2;
     color: #333;
+    
   }
   
   /* Contenitore principale */
@@ -18,7 +19,7 @@ body {
   /* Titolo principale */
   h1 {
     font-size: 4rem;
-    color: #00bcd4;  /* Colore vivace per un aspetto futuristico */
+    color: #333;  /* Colore vivace per un aspetto futuristico */
     margin-top: 7rem;
     margin-bottom: 3rem;
     font-weight: 600;
@@ -77,14 +78,11 @@ body {
     transition: transform 0.3s ease;
   }
   
-  p:hover {
-    transform: scale(1.05);  /* Ingrandimento della descrizione al passaggio del mouse */
-  }
   
   /* Responsività per dispositivi mobili */
   @media (max-width: 768px) {
     .foundations-list {
-      grid-template-columns: 1fr;  /* Una colonna su dispositivi mobili */
+      grid-template-columns: 1fr;
       gap: 1.5rem;
     }
   
