@@ -1,199 +1,182 @@
-/* Definiamo l'animazione di entrata da sinistra a destra */
-@keyframes slideInFromLeft {
-    0% {
-      transform: translateX(-100%);
-      opacity: 0;
+/* General Container */
+.working-process-container {
+    padding: 80px 30px;
+    background-color: #f8f8f8; /* Sfondo grigio chiaro */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #121212;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Titolo "Our Working Process" */
+.working-process-header {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.working-process-header h1 {
+    font-size: 4rem;
+    letter-spacing: 2px;
+    color: #333;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+.intro-text {
+    font-size: 1.3rem;
+    color: #555555;
+    margin-top: 15px;
+    opacity: 0.85;
+}
+
+/* Steps Styling */
+.working-process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.steps-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.step {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    width: 48%;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+.step h2 {
+    font-size: 2.2rem;
+    color: #252525;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.step p {
+    font-size: 1.2rem;
+    color: #444444;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+/* Hover effect for steps */
+.step:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+}
+
+/* Why Quark Techie Section */
+.why-quark-techie {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    margin-top: 70px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Titolo "Why Quark Techie" */
+.why-quark-techie h2 {
+    font-size: 2.8rem;
+    color: #121212;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.why-quark-techie p {
+    font-size: 1.3rem;
+    color: #363636;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+/* Why Quark Techie Details */
+.why-quark-techie-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 60px;
+    align-items: center;
+}
+
+.why-quark-techie-item {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+.why-quark-techie-item h3 {
+    font-size: 2rem;
+    color: #252525;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-weight: bold;
+}
+
+.why-quark-techie-item p {
+    font-size: 1.2rem;
+    color: #444444;
+    line-height: 1.8;
+}
+
+/* Hover effect for Quark Techie items */
+.why-quark-techie-item:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+}
+
+/* Responsività */
+@media (max-width: 768px) {
+    .steps-row {
+        flex-direction: column;
+        gap: 30px;
     }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
+
+    .step {
+        width: 100%;
     }
-  }
-  
-  /* General Container */
-  .working-process-container {
-      padding: 80px 30px;
-      background-color: #f8f8f8; 
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: #121212;
-      font-family: 'Roboto', sans-serif;
-  }
-  
-  /* Titolo "Our Working Process" */
-  .working-process-header {
-      text-align: center;
-      margin-bottom: 40px;
-      margin-top: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      animation: slideInFromLeft 1s ease-out; /* Animazione per l'header */
-  }
-  
-  .working-process-header h1 {
-      font-size: 4rem;
-      letter-spacing: 2px;
-      color: #333;
-      text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
-      font-weight: bold;
-  }
-  
-  .intro-text {
-      font-size: 1.3rem;
-      color: #555555;
-      margin-top: 15px;
-      opacity: 0.85;
-  }
-  
-  /* Steps Styling */
-  .working-process-steps {
-      display: flex;
-      flex-direction: column;
-      gap: 60px;
-      max-width: 1200px;
-      width: 100%;
-      margin-top: 40px;
-      align-items: center;
-  }
-  
-  .steps-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 50px;
-      margin-bottom: 30px;
-      justify-content: center;
-  }
-  
-  .step {
-      background-color: rgba(255, 255, 255, 0.95);
-      padding: 40px 40%;
-      border-radius: 15px;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-      width: 48%;
-      transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
-      animation: slideInFromLeft 1s ease-out; /* Animazione per ogni step */
-  }
-  
-  .step h2 {
-      font-size: 2.2rem;
-      color: #252525;
-      letter-spacing: 1px;
-      font-weight: bold;
-  }
-  
-  .step p {
-      font-size: 1.2rem;
-      color: #444444;
-      line-height: 1.8;
-      opacity: 0.9;
-  }
-  
-  /* Hover effect for steps */
-  .step:hover {
-      transform: translateY(-15px);
-      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
-      color: #ffffff;
-  }
-  
-  /* Why Quark Techie Section */
-  .why-quark-techie {
-      background-color: rgba(255, 255, 255, 0.95);
-      padding: 30px;
-      margin-top: 70px;
-      text-align: center;
-      border-radius: 15px;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-      max-width: 85%;
-      margin-left: auto;
-      margin-right: auto;
-      animation: slideInFromLeft 1s ease-out; /* Animazione per la sezione Why Quark Techie */
-  }
-  
-  /* Titolo "Why Quark Techie" */
-  .why-quark-techie h2 {
-      font-size: 2.8rem;
-      color: #121212;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 30px;
-      font-weight: bold;
-  }
-  
-  .why-quark-techie p {
-      font-size: 1.3rem;
-      color: #363636;
-      line-height: 1.8;
-      opacity: 0.9;
-  }
-  
-  /* Why Quark Techie Details */
-  .why-quark-techie-details {
-      display: flex;
-      justify-content: space-between;
-      gap: 50px;
-      max-width: 1200px;
-      width: 100%;
-      margin-top: 60px;
-      align-items: center;
-  }
-  
-  .why-quark-techie-item {
-      background-color: rgba(255, 255, 255, 0.95);
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-      width: 30%;
-      transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
-      animation: slideInFromLeft 1s ease-out; /* Animazione per ogni item */
-  }
-  
-  .why-quark-techie-item h3 {
-      font-size: 2rem;
-      color: #252525;
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-      font-weight: bold;
-  }
-  
-  .why-quark-techie-item p {
-      font-size: 1.2rem;
-      color: #444444;
-      line-height: 1.8;
-  }
-  
-  /* Hover effect for Quark Techie items */
-  .why-quark-techie-item:hover {
-      transform: translateY(-15px);
-      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
-      color: #ffffff;
-  }
-  
-  /* Responsività */
-  @media (max-width: 768px) {
-      .steps-row {
-          flex-direction: column;
-          gap: 30px;
-      }
-  
-      .step {
-          width: 100%;
-      }
-  
-      .why-quark-techie {
-          width: 90%;
-      }
-  
-      .why-quark-techie-details {
-          flex-direction: column;
-          gap: 30px;
-      }
-  
-      .why-quark-techie-item {
-          width: 100%;
-          padding: 30px;
-      }
-  }
-  
+
+    .why-quark-techie {
+        width: 90%;
+    }
+
+    .why-quark-techie-details {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .why-quark-techie-item {
+        width: 100%;
+        padding: 30px;
+    }
+}

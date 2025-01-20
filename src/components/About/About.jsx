@@ -22,7 +22,7 @@ const About = () => {
           <div className="about-text">
             <h2 className="about-title">Agile and Flexible Approach</h2>
             <p className="about-description">
-              Our highly qualified team understands that quality isn't just about testing software—it's about creating a culture of excellence and continuous improvement. Our processes are flexible and adaptive to meet the fluctuating needs of projects.
+              Our highly qualified team understands that quality isn't just about testing software, it's about creating a culture of excellence and continuous improvement. Our processes are flexible and adaptive to meet the fluctuating needs of projects.
             </p>
           </div>
           <div className="about-image">

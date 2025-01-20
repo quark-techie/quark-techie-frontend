@@ -33,12 +33,15 @@ const Section = ({ title, title2, text, img, reverse, index, isBlue }) => {
     return index % 2 === 0 ? 'blue' : 'yellow';
   };
 
+  const isQuarkTechie = index === 0;  // Check if it's the first section ("Quark Techie")
+
   return (
     <div
       ref={sectionRef}
       className={`section ${reverse ? 'reverse' : ''} ${isVisible ? 'visible' : ''}`}
+      style={isQuarkTechie ? { backgroundImage: `url(${img})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}}
     >
-      <div className="text-container">
+      <div className="text-container" style={isQuarkTechie ? { color: 'white', padding: '10vh 3vw', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.6)' } : {}}>
         <h1 className={`title ${getColorClass(index, isBlue)}`}>
           {title} {title2 && <span className="subtitle">{title2}</span>}
         </h1>
@@ -46,9 +49,11 @@ const Section = ({ title, title2, text, img, reverse, index, isBlue }) => {
           {text}
         </p>
       </div>
-      <div className="image-container">
-        <img src={img} alt={title2} className="image" />
-      </div>
+      {!isQuarkTechie && (
+        <div className="image-container">
+          <img src={img} alt={title2} className="image" />
+        </div>
+      )}
     </div>
   );
 };
@@ -59,7 +64,7 @@ const Home = () => {
       title: "Quark",
       title2: "Techie",
       text: "Quality for the finest",
-      img: "/horizontal_original.png",
+      img: "/logobackground.png", // Set your background image for Quark Techie here
       reverse: false,
       isBlue: false,
     },
@@ -110,7 +115,6 @@ const Home = () => {
           isBlue={section.isBlue}
         />
       ))}
-
     </div>
   );
 };

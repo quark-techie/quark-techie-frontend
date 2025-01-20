@@ -2,9 +2,9 @@
 .navbar {
   position: fixed;
   top: 1rem;
-  left: 50%; /* Centrato orizzontalmente */
-  transform: translateX(-50%); /* Centro esatto della navbar */
-  width: 90%; /* Flessibile per dispositivi più piccoli */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
   background: linear-gradient(90deg, #000000, #202020);
   color: white;
   padding: 10px 35px;
@@ -39,8 +39,8 @@
 }
 
 .navbar-logo img {
-  width: 100%; /* Logo dinamico che si adatta alla larghezza della navbar */
-  max-width: 150px; /* Dimensione massima per evitare che diventi troppo grande */
+  width: 100%;
+  max-width: 150px;
   height: auto;
   transition: transform 0.3s ease;
 }
@@ -100,18 +100,72 @@
   transform: scale(1.1);
 }
 
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-btn:hover {
+  transform: scale(1.2);
+  color: #ffeb73;
+}
+
+.dropdown-menu {
+  list-style: none;
+  background-color: #333;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  padding: 10px 0;
+  display: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-menu li {
+  text-align: center;
+}
+
+.dropdown-menu a {
+  color: white;
+  font-size: 1rem;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #444;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 /* Media query per schermi più piccoli */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column; /* Disposizione verticale */
+    flex-direction: column;
     padding: 20px;
-    width: 100%; /* Utilizza l'intera larghezza su schermi piccoli */
+    width: 100%;
     left: 0;
-    transform: translateX(0); /* Rimuove il centramento orizzontale */
+    transform: translateX(0);
   }
 
   .navbar-logo img {
-    max-width: 120px; /* Logo più piccolo per schermi piccoli */
+    max-width: 120px;
   }
 
   .navbar-links {
@@ -121,12 +175,22 @@
   }
 
   .navbar-links li {
-    width: 100%; /* Occupa tutta la larghezza su dispositivi mobili */
+    width: 100%;
     text-align: center;
   }
 
   .navbar-links a {
-    font-size: 1.2rem; /* Aumenta la dimensione dei link su schermi piccoli */
+    font-size: 1.2rem;
     padding: 10px 20px;
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+  }
+
+  .dropdown-btn {
+    width: 100%;
+    text-align: center;
   }
 }

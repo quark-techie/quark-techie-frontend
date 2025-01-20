@@ -28,22 +28,21 @@
 }
 
 .title {
-  font-size: 5vw;
+  font-size: 6vw;
   font-weight: bolder;
   margin-bottom: 2vh;
   text-transform: uppercase;
   letter-spacing: 3px;
   animation: slideIn 1s ease-out;
   display: block;
-  background: linear-gradient(45deg, #517575, #f8d300);
+  background: linear-gradient(45deg, #ff0000, #f8d300);
   background-clip: text;
-  color: transparent;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  color: red;
 }
 
 .description {
   font-size: 2rem;
-  color: #333;
+  color: #fff;  /* Imposta il testo descrizione bianco */
   line-height: 1.5;
   opacity: 0;
   white-space: normal;
@@ -94,7 +93,7 @@
 }
 
 .image-container {
-  max-width: 40rem;
+  max-width: 50rem;
   transition: transform 0.3s ease;
 }
 
@@ -132,4 +131,20 @@
   .image {
     border-radius: 15px;
   }
+}
+
+/* Specific styles for the Quark Techie section with background image */
+.section:first-child {
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(80%);  /* Applica un filtro di scala di grigi all'immagine */
+}
+
+.text-container {
+  padding: 10vh 3vw;
+  color: white;  /* Imposta il testo bianco per contrastare l'immagine grigia */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Aggiungi un'ombra al testo per migliorare la visibilità */
+  opacity: 1;
+  position: relative;
+  z-index: 1; /* Assicurati che il testo sia sopra l'immagine */
 }
