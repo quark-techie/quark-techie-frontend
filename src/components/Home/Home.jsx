@@ -90,7 +90,7 @@ const Home = () => {
     {
       title: "Working Process",
       text: "We follow a structured and thorough process to ensure top-notch quality in every project.",
-      img: "/working_process.jpg",
+      img: "/foto6.png",
       reverse: false,
       isBlue: true,
     },
