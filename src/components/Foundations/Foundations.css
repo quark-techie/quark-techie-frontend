@@ -1,101 +1,103 @@
-/* Impostazioni generali */
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2;
-    color: #333;
-    
+/* Animazioni con @keyframes */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
   }
-  
-  /* Contenitore principale */
-  .our-foundations {
-    max-width: 1200px;  /* Maggiore larghezza per uno stile più moderno */
-    margin: 0 auto;
-    padding: 3rem 2rem;  /* Più padding per uno spazio maggiore */
-    text-align: center;
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
-  
-  /* Titolo principale */
-  h1 {
-    font-size: 4rem;
-    color: #333;  /* Colore vivace per un aspetto futuristico */
-    margin-top: 7rem;
-    margin-bottom: 3rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);  /* Effetto di ombra per il titolo */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  /* Lista di fondamenti con griglia a 2 righe e 2 colonne */
-  .foundations-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);  /* 2 colonne per schermi ampi */
-    grid-gap: 2rem;
-    margin-top: 2rem;
+  to {
+    opacity: 1;
   }
-  
-  /* Elemento di ciascun fondamento */
-  .foundation-item {
-    background-color: #ffffff;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;  /* Più angoli arrotondati per un look più morbido */
-    padding: 2.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    position: relative;  /* Necessario per l'effetto hover */
-  }
-  
-  /* Effetto hover per gli item */
-  .foundation-item:hover {
-    transform: translateY(-10px);  /* Sospensione sopra al passaggio del mouse */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    color: #fff;  /* Cambia il testo a bianco per contrastare con lo sfondo */
-  }
-  
-  /* Contenuto di ciascun fondamento */
-  .foundation-content {
-    text-align: left;
-    padding: 0 1.5rem;  /* Aggiunto padding per un migliore bilanciamento del contenuto */
-  }
-  
-  /* Titolo di ciascun fondamento */
-  h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 1.2rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
-  }
-  
-  /* Descrizione di ciascun fondamento */
-  p {
-    font-size: 1.15rem;
-    color: #666;
-    line-height: 1.7;
-    transition: transform 0.3s ease;
-  }
-  
-  
-  /* Responsività per dispositivi mobili */
-  @media (max-width: 768px) {
-    .foundations-list {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-  
-    h1 {
-      font-size: 2.8rem;
-    }
-  
-    h2 {
-      font-size: 1.8rem;
-    }
-  
-    p {
-      font-size: 1rem;
-    }
-  }
-  
+}
+
+/* Stili per il container principale */
+.our-foundations {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out; /* Animazione per il contenitore */
+}
+
+.our-foundations h1 {
+  font-size: 4rem;
+  color: #333;
+  margin-top: 7rem;
+  margin-bottom: 3rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  animation: slideInFromLeft 1s ease-in-out; /* Animazione per il titolo */
+}
+
+.foundations-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  margin-top: 2rem;
+}
+
+.foundation-item {
+  background-color: #ffffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 2.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  opacity: 0; /* Inizia nascosto */
+  animation: slideInFromLeft 1s ease-in-out;
+  animation-fill-mode: forwards; /* Mantiene lo stato finale */
+}
+
+.foundation-item:nth-child(1) {
+  animation-delay: 0.2s; /* Ritardo per il primo elemento */
+}
+
+.foundation-item:nth-child(2) {
+  animation-delay: 0.4s; /* Ritardo per il secondo elemento */
+}
+
+.foundation-item:nth-child(3) {
+  animation-delay: 0.6s; /* Ritardo per il terzo elemento */
+}
+
+.foundation-item:nth-child(4) {
+  animation-delay: 0.8s; /* Ritardo per il quarto elemento */
+}
+
+.foundation-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.foundation-content {
+  text-align: left;
+  padding: 0 1.5rem;
+}
+
+.our-foundations h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.our-foundations p {
+  font-size: 1.15rem;
+  color: #666;
+  line-height: 1.7;
+}

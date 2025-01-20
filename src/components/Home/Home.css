@@ -4,7 +4,7 @@
   justify-content: space-around;
   padding: 5vh 3vw;
   min-height: 100vh;
-  background-color: rgb(247, 247, 247);
+  background-color: #f0f0f0;
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 1s ease, transform 1s ease;
@@ -12,7 +12,7 @@
 
 .section.reverse {
   flex-direction: row-reverse;
-  background-color: #eaeaea;
+  background-color: #e0e0e0;
 }
 
 .section.visible {
@@ -43,13 +43,13 @@
 
 .description {
   font-size: 2rem;
-  color: #121212;
+  color: #333;
   line-height: 1.5;
   opacity: 0;
   white-space: normal;
   text-align: center;
   transition: opacity 1s ease;
-  animation: slideIn 1s ease-out;
+  animation: fadeIn 1s ease-out;
 }
 
 .description.complete {
@@ -57,20 +57,20 @@
 }
 
 .title span.quark {
-  color: #517575;
+  color: #007BFF;
 }
 
 .title span.techie {
   display: block;
-  color: #f8d300;
+  color: #00C851;
 }
 
 .title .blue {
-  color: #517575;
+  color: #007BFF;
 }
 
 .title .yellow {
-  color: #f8d300;
+  color: #FFBB33;
 }
 
 @keyframes slideIn {
@@ -84,8 +84,17 @@
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .image-container {
-  max-width: 50rem;
+  max-width: 40rem;
   transition: transform 0.3s ease;
 }
 

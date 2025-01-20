@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';  // Usa Link per il logo
 import './Navbar.css';
 
 const Navbar = ({ scrollToFooter }) => {
@@ -11,7 +11,10 @@ const Navbar = ({ scrollToFooter }) => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <img src="/horizontal_original.png" alt="Logo" />
+        {/* Usa Link per il logo, in modo che cliccando porti alla home */}
+        <Link to="/">
+          <img src="/horizontal_original.png" alt="Logo" />
+        </Link>
       </div>
       <ul className="navbar-links">
         <li>
@@ -35,7 +38,7 @@ const Navbar = ({ scrollToFooter }) => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/working-process" activeClassName="active"> {/* Aggiungi il link per Working Process */}
+          <NavLink to="/working-process" activeClassName="active">
             Working Process
           </NavLink>
         </li>
