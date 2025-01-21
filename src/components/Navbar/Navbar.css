@@ -54,6 +54,10 @@
   padding: 0;
 }
 
+.hamburger-menu {
+  display: none;
+}
+
 .navbar-links li {
   position: relative;
   transition: transform 0.3s ease;
@@ -73,7 +77,7 @@
 }
 
 .navbar-links a:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
   color: #ffeb73;
 }
 
@@ -131,7 +135,6 @@
   padding: 10px 0;
   display: none;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .dropdown-menu li {
@@ -144,6 +147,7 @@
   padding: 10px 15px;
   display: block;
   text-decoration: none;
+  
 }
 
 .dropdown-menu a:hover {
@@ -154,43 +158,70 @@
   display: block;
 }
 
-/* Media query per schermi più piccoli */
+/* Responsiveness per il menu mobile */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    padding: 20px;
-    width: 100%;
-    left: 0;
-    transform: translateX(0);
-  }
-
-  .navbar-logo img {
-    max-width: 120px;
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    font-size: 30px;
+    color: lightgray;
   }
 
   .navbar-links {
+    position: fixed;
+    top: 3rem;
+    left: -100%; /* Nascondi il menu a sinistra */
+    height: 100%;
+    width: 250px; /* Larghezza del menu laterale */
+    transition: left 0.3s ease; /* Transizione per l'apertura */
+    padding: 20px;
+  }
+
+  .navbar-links.responsive {
+    left: 0; /* Mostra il menu quando è aperto */
+  }
+
+  .navbar-links {
+    display: flex;
     flex-direction: column;
     gap: 10px;
-    align-items: center;
   }
 
-  .navbar-links li {
-    width: 100%;
-    text-align: center;
+  .navbar-logo
+  {display: none;}
+  .overlay {
+    position: fixed  ;
+    top: 0;
+    left: 0;
+    width:26%;
+    height: 100%;
+    background: rgba(0, 0, 0,1);
+    z-index: 999;
   }
+  .navbar{
+  border-radius: 0px;
+  top: 0px;
+  position: fixed;
+  padding: 0.75rem 3.2rem;
+  
+  }
+.dropdown-menu{
+  position: sticky;
+  background-color: transparent;
+  box-shadow: none;
+  left: -1rem;  
+  text-align: left;
+  max-width: 75%;
+}
+  
+  .dropdown-menu a:hover {
+    background-color: transparent;
+ 
 
-  .navbar-links a {
-    font-size: 1.2rem;
-    padding: 10px 20px;
-  }
+}
+.navbar-links .active {
+  box-shadow: none;
+  max-width: 75%;
+}
 
-  .dropdown-menu {
-    position: static;
-    width: 100%;
-  }
-
-  .dropdown-btn {
-    width: 100%;
-    text-align: center;
-  }
 }

@@ -1,72 +1,84 @@
-import React from 'react';
-import './Services.css'; // Importa il file CSS per lo stile
+import React, { useState, useRef, useEffect } from 'react';
+import './Services.css';
 
 const Services = () => {
-  const logos = [
-    { src: "/logo1.png", alt: "Logo 1", text: " Cypress" },
-    { src: "/logo2.png", alt: "Logo 2", text: "Azure DevOps" },
-    { src: "/logo3.png", alt: "Logo 3", text: "Atlassian" },
-    { src: "/logo4.png", alt: "Logo 4", text: "Docker" },
-    { src: "/logo5.png", alt: "Logo 5", text: "Selenium" },
-    { src: "/logo6.png", alt: "Logo 6", text: "Postman" },
-    { src: "/logo7.png", alt: "Logo 7", text: "Git" },
-    { src: "/logo8.png", alt: "Logo 8", text: "DevOps/CI-CD" },
-  ];
+  const [showDetails, setShowDetails] = useState(false);
+  const detailsRef = useRef(null); // Riferimento alla sezione dei dettagli
+
+  // Funzione per gestire il click sul pulsante "Show More"
+  const handleShowDetails = () => {
+    setShowDetails(true);
+  };
+
+  // Effetto che esegue lo scroll verso i dettagli quando il contenuto è visibile
+  useEffect(() => {
+    if (showDetails && detailsRef.current) {
+      detailsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [showDetails]); // Trigger dell'effetto ogni volta che "showDetails" cambia
 
   return (
-    <div className="services-container">
-      <div>
-        <div className="our-services">
-          <h2>Our Services</h2>
-          <div className="services-list">
-            <div className="service">
-              <span className="icon">🔍</span>
-              <div>
-                <h3>Analysis and Assessment</h3>
-                <p>
-                  Study of the current situation of Testing in the company: flows, definition of use cases, frameworks, documentation, etc.
-                </p>
-              </div>
-            </div>
-            <div className="service">
-              <span className="icon">💻</span>
-              <div>
-                <h3>Proposals and Implementation</h3>
-                <p>
-                  For improvement of weak and critical points identified at the QA level and in the team, both developers and analysts.
-                </p>
-              </div>
-            </div>
-            <div className="service">
-              <span className="icon">ℹ️</span>
-              <div>
-                <h3>Support</h3>
-                <p>
-                  Assistance to the team during production releases, testing, documentation and development control.
-                </p>
-              </div>
-            </div>
-            <div className="service">
-              <span className="icon">🎓</span>
-              <div>
-                <h3>Training</h3>
-                <p>
-                  Training along with support and resolution of doubts during the actions.
-                </p>
-              </div>
-            </div>
+    <div>
+      <div className="services-container">
+        <div className="services-content">
+          <div className="services-text-container">
+            <h1 className="services-title">Our Services</h1>
+            <p className="services-text">
+              Quality Assurance Services Tailored to Your Needs
+            </p>
+            <button className="services-button" onClick={handleShowDetails}>
+              Show More
+            </button>
           </div>
         </div>
       </div>
-      <h1 className='toolsAndFramework'>Tools and frameworks</h1>
-      <div className="logo-collection">
-        {logos.map((logo, index) => (
-          <div className="logo-item" key={index}>
-            <img src={logo.src} alt={logo.alt} className="logo-image" />
-            <div className="logo-text">{logo.text}</div>
+
+      {/* Dettagli visibili solo quando il bottone "Show More" viene cliccato */}
+      {showDetails && (
+        <div ref={detailsRef} className="services-details">
+          <div className="services-cards-container">
+            <div className="service-card">
+              <h3 className="service-card-title">Analysis and Evaluation</h3>
+              <p className="service-card-text">
+                We conduct a thorough audit of your existing testing processes, identifying strengths, weaknesses, and areas for improvement.
+                <br />
+                <br />
+                This detailed evaluation ensures that the solutions we provide are tailored to your specific needs, helping your team perform at its best.
+              </p>
+            </div>
+
+            <div className="service-card">
+              <h3 className="service-card-title">Quality Control</h3>
+              <p className="service-card-text">
+                With years of experience, we ensure quality control across all processes, guaranteeing the highest standards of product quality.
+                <br />
+                <br />
+                Our experts continuously monitor and improve processes to achieve optimal results and minimize risks.
+              </p>
+            </div>
+
+            <div className="service-card">
+              <h3 className="service-card-title">Customized Approach</h3>
+              <p className="service-card-text">
+                We customize our approach based on your business requirements, ensuring that our solutions align perfectly with your goals.
+                <br />
+                <br />
+                By understanding your unique challenges, we craft strategies that drive success.
+              </p>
+            </div>
+
+            <div className="service-card">
+              <h3 className="service-card-title">Success-Oriented</h3>
+              <p className="service-card-text">
+                Our goal is to drive success by implementing the best solutions for your business, ensuring continuous growth and improvement.
+                <br />
+                <br />
+                We work closely with you to implement the best strategies that lead to long-term success.
+              </p>
+            </div>
           </div>
-        ))}
-      </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -1,150 +1,68 @@
-.section {
+.home {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 5vh 3vw;
-  min-height: 100vh;
-  background-color: #f0f0f0;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f7f7f7;
+  overflow: hidden;
 }
 
-.section.reverse {
-  flex-direction: row-reverse;
-  background-color: #e0e0e0;
-}
-
-.section.visible {
-  opacity: 1;
-  transform: translateY(0);
+.logo-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  opacity: 0.25;
+  z-index: 0;
 }
 
 .text-container {
-  max-width: 50%;
-  padding: 5vh 2vw;
+  position: relative;
+  z-index: 1;
   text-align: center;
-  transition: transform 1s ease, opacity 1s ease;
 }
 
 .title {
   font-size: 6vw;
-  font-weight: bolder;
-  margin-bottom: 2vh;
+  font-weight: 700;
+  line-height: 1.2;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  animation: slideIn 1s ease-out;
-  display: block;
-  background: linear-gradient(45deg, #ff0000, #f8d300);
-  background-clip: text;
-  color: red;
+  letter-spacing: 2px;
+  color: black;
 }
 
-.description {
-  font-size: 2rem;
-  color: #fff;  /* Imposta il testo descrizione bianco */
-  line-height: 1.5;
-  opacity: 0;
-  white-space: normal;
-  text-align: center;
-  transition: opacity 1s ease;
-  animation: fadeIn 1s ease-out;
+.title .highlight {
+  color: #00cc66; 
 }
 
-.description.complete {
-  opacity: 1;
+.subtitle {
+  font-weight: 400;
+  color: #333;
+  font-size: 1.5vw;
+  margin-top: 1rem;
 }
 
-.title span.quark {
-  color: #007BFF;
+.button-container {
+  margin-top: 3rem;
 }
 
-.title span.techie {
-  display: block;
-  color: #00C851;
-}
-
-.title .blue {
-  color: #007BFF;
-}
-
-.title .yellow {
-  color: #FFBB33;
-}
-
-@keyframes slideIn {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.image-container {
-  max-width: 50rem;
+.button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(45deg, #00cc66, #00cc88);
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
   transition: transform 0.3s ease;
+  text-decoration: none;
 }
 
-.image {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
-
-.image-container:hover .image {
+.button:hover {
   transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
-  .section {
-    flex-direction: column;
-    padding: 5vh 2vw;
-    text-align: center;
-  }
-
-  .text-container,
-  .image-container {
-    max-width: 80%;
-  }
-
-  .title {
-    font-size: 6rem;
-  }
-
-  .description {
-    font-size: 2.5rem;
-  }
-
-  .image {
-    border-radius: 15px;
-  }
-}
-
-/* Specific styles for the Quark Techie section with background image */
-.section:first-child {
-  background-size: cover;
-  background-position: center;
-  filter: grayscale(80%);  /* Applica un filtro di scala di grigi all'immagine */
-}
-
-.text-container {
-  padding: 10vh 3vw;
-  color: white;  /* Imposta il testo bianco per contrastare l'immagine grigia */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Aggiungi un'ombra al testo per migliorare la visibilità */
-  opacity: 1;
-  position: relative;
-  z-index: 1; /* Assicurati che il testo sia sopra l'immagine */
 }
