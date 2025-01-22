@@ -46,19 +46,19 @@ const Working = () => {
 
   return (
     <div className="working-container">
-      {/* Black Container: Working Process */}
+      {/* Working Process Section */}
       <div className="working-content">
         <div className="working-text-container">
-          <h1 className="working-title">Working Process</h1>
+          <h1 className="working-title">Our Working Process</h1>
           <p className="working-text">
-            At Quark Techie, we are a team of professionals passionate about working software quality.
-            With over 14 years of industry experience, we help businesses like yours create flawless digital products.
+          A holistic strategy managed by QA experts
+
           </p>
-          <a href="#contact" className="working-button">Let's Build Together</a>
+          <a href="#contact" className="working-button">Contact Us</a>
         </div>
       </div>
 
-      {/* New Card Grid Section */}
+      {/* Card Grid Section */}
       <div className="working-grid">
         {sections.map((section, index) => (
           <div key={index} className="working-card">
@@ -73,29 +73,32 @@ const Working = () => {
         ))}
       </div>
 
+      {/* Headline Section - "How We Do It" */}
+      <div className="headline-container">
+        <h2 className="headline-title">How We Do It</h2>
+        <h3 className="headline-subtitle">Comprehensive Methodology for Exhaustive Quality Assurance</h3>
+        <p className="headline-text">
+          We implement a holistic strategy covering every stage of development, ensuring quality every step of the way.
+        </p>
+      </div>
+
       {/* Slider Section */}
       <div className="slider-container">
         {/* Left Arrow */}
-        <div className="slider-buttons">
-          <button className="slider-button" onClick={prevSlide}>
-            <span>&lt;</span>
-          </button>
+        <div className="slider-buttons left" onClick={prevSlide}>
+          <span>&lt;</span>
         </div>
 
         {/* Slider Content */}
         <div className="slider-content">
-          <div className="slider-number">
-            <span>{slides[currentIndex].title}</span>
-          </div>
+          <div className="slider-number">{slides[currentIndex].title}</div>
           <h3 className="slider-subtitle">{slides[currentIndex].subtitle}</h3>
           <p className="slider-text">{slides[currentIndex].text}</p>
         </div>
 
         {/* Right Arrow */}
-        <div className="slider-buttons">
-          <button className="slider-button" onClick={nextSlide}>
-            <span>&gt;</span>
-          </button>
+        <div className="slider-buttons right" onClick={nextSlide}>
+          <span>&gt;</span>
         </div>
       </div>
     </div>

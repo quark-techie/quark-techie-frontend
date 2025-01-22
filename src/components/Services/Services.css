@@ -2,132 +2,148 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   padding: 6vw;
   box-sizing: border-box;
   flex-direction: column;
+  background: #f0f4f8; /* Light background color */
 }
 
 .services-content {
-  border-radius: 50px;
+  border-radius: 40px; /* Maggiore border-radius */
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
-  backdrop-filter: blur(15px);
+  background: black; /* Gradiente verde */
   color: #fff;
-  padding: 16rem 3rem;
+  padding: 5rem 3rem;
   width: 100%;
-  transition: all 0.3s ease-in-out;
-  flex-direction: column;
   text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); /* Ombra più morbida */
+  transition: all 0.3s ease;
+  flex-direction: column;
 }
 
 .services-title {
   font-family: 'Roboto', sans-serif;
-  font-size: 3rem;
-  margin-bottom: 20px;
-  font-weight: bold;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Ombra leggera per il titolo */
+  letter-spacing: 2px; /* Maggiore distanza tra lettere */
 }
 
 .services-text {
-  color: #fff;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   line-height: 1.8;
+  color: #f4f4f4;
+  margin-top: 10px; /* Distanza tra il titolo e il testo */
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.services-button {
-  padding: 15px 30px;
-  font-size: 1.1rem;
-  color: #fff;
-  background-color: #00cc66;
-  border-radius: 50px;
-  cursor: pointer;
+
+.what-we-do-container {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.what-we-do-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.what-we-do-text {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 20px auto;
 }
 
 .services-details {
   margin-top: 50px;
-  text-align: left;
-  padding: 20px;
-  background-color: #f7f7f7;
-  border-radius: 8px;
+  text-align: center;
+  width: 100%;
 }
 
 .services-cards-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding-bottom: 20px;
-  overflow-x: auto;
-  position: relative; /* Per il posizionamento della freccia fluttuante */
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .service-card {
-  background-color: #000000;
+  background-color: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 250px;
-  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  padding: 25px;
   text-align: center;
   cursor: pointer;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
   flex-shrink: 0;
-  height: 350px;
+  margin-bottom: 30px;
 }
 
-.service-card.expanded .service-card-text {
-  display: block;
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-card-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #00cc66;
 }
 
 .service-card-title {
   font-size: 1.6rem;
   margin-bottom: 10px;
-  color: #0088d6;
+  color: #333;
 }
 
 .service-card-text {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #ffffff;
-  display: -webkit-box;
-  line-clamp: 3;
-  overflow: hidden;
-  transition: height 0.3s ease;
+  color: #777;
+  display: block;
 }
 
-.expand-arrow {
-  font-size: 2rem;
-  margin-top: 10px;
-  transition: transform 0.3s ease;
-  color: white; /* Freccia bianca */
+.contact-button {
+  margin-top: 30px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #00cc66;
+  border-radius: 50px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.expand-arrow.expanded {
-  transform: rotate(180deg); /* Ruota la freccia quando la card è espansa */
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-
-
-@keyframes float {
-  0% {
-    transform: translateY(-50%) translateY(-10px);
-  }
-  50% {
-    transform: translateY(-50%) translateY(10px);
-  }
-  100% {
-    transform: translateY(-50%) translateY(-10px);
-  }
+.contact-button:hover {
+  background-color: #009966;
+  transform: translateY(-5px); /* Leggero effetto di spinta quando si passa sopra */
 }
 
 @media (max-width: 768px) {
   .service-card {
-    width: 200px;
+    width: 220px;
+  }
+
+  .what-we-do-title {
+    font-size: 2rem;
+  }
+
+  .what-we-do-text {
+    font-size: 1.1rem;
   }
 }
