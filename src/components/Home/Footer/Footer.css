@@ -28,7 +28,6 @@
   color: #61dafb;
   text-decoration: none;
 }
-
 .footer-contact a:hover {
   text-decoration: underline;
 }
@@ -52,4 +51,25 @@
   .footer-contact {
     font-size: 0.9rem; /* Ancora più piccolo per schermi piccoli */
   }
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* Spazio tra le icone */
+  margin-top: 1.5rem; 
+}
+
+.footer-icon img {
+  width: 40px; /* Dimensioni delle icone */
+  height: 40px;
+  transition: transform 0.3s ease; /* Animazione al passaggio del mouse */
+  color: #61dafb;
+  text-decoration: none;
+
+}
+
+.footer-icon img:hover {
+  transform: scale(1.2); /* Ingrandimento al passaggio del mouse */
+  
 }

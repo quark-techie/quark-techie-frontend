@@ -9,6 +9,17 @@ const Footer = React.forwardRef((props, ref) => {
         <p className="footer-contact">
           Email: <a href="mailto:contact@quarktechie.com">contact@quarktechie.com</a> | Phone: <a href="tel:+1234567890">+1 234 567 890</a>
         </p>
+        <div className="footer-icons">
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="footer-icon">
+            <img src="/path-to-icons/linkedin-icon.svg" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="footer-icon">
+            <img src="/path-to-icons/github-icon.svg" alt="GitHub" />
+          </a>
+          <a href="#!" className="footer-icon">
+            <img src="/path-to-icons/placeholder-icon.svg" alt="Icona Vuota" />
+          </a>
+        </div>
       </div>
     </div>
   );
