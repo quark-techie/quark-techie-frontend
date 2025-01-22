@@ -1,0 +1,197 @@
+/* Slider Section */
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 70px;
+  gap: 30px;
+  width: 100%;
+}
+
+.slider-content {
+  text-align: center;
+  background: #f4f4f4;
+  padding: 30px; /* Ridotto per rendere il blocco più piccolo */
+  border-radius: 12px;
+  width: 50%; /* Ridotto per fare il blocco più compatto */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.slider-number {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4rem; /* Ridotto per essere più piccolo */
+  color: #333;
+  font-weight: 700;
+}
+
+.slider-subtitle {
+  font-size: 1.8rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.slider-text {
+  font-size: 1.2rem;
+  color: #777;
+  line-height: 1.6;
+}
+
+/* Positioning the static arrows */
+.slider-buttons {
+  position: absolute;
+  top: -50px; /* Distanza maggiore dalle frecce rispetto al numero */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 30px; /* Distanza tra le frecce */
+}
+
+.slider-button {
+  background-color: transparent; /* Rimuove lo sfondo */
+  border: none;
+  color: #333; /* Colore del testo della freccia */
+  padding: px; /* Ridotto per essere più piccolo */
+  font-size: 1.5rem; /* Ridotto per essere più piccolo */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.slider-button:hover {
+  transform: scale(1.1);
+  color: #00cc66;
+}
+
+/* Black Container for Working Process */
+.working-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; 
+  width: 100%;
+  padding: 5vw;
+  box-sizing: border-box;
+  flex-direction: column;
+  margin-bottom: 20%;
+}
+
+.working-content {
+  position: relative;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: #fff;
+  padding: 10rem 3rem; 
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.working-text-container {
+  width: 70%;
+  text-align: center;
+}
+
+.working-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.working-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+.working-button {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #00cc66;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.working-button:hover {
+  background-color: #fffc3a;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* New Grid Section */
+.working-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  padding: 50px 0;
+}
+
+.working-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.working-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  color: #00cc66;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-points {
+  list-style: none;
+  padding: 0;
+  color: #555;
+}
+
+.card-points li {
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+/* How We Do It Section */
+.how-we-do-it {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.how-we-do-it-headline {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: 700;
+}
+
+.how-we-do-it-description {
+  font-size: 1.2rem;
+  color: #777;
+  margin-top: 20px;
+}

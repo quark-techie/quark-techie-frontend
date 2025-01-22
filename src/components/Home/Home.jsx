@@ -17,7 +17,7 @@ const Home = () => {
           Specialized Consulting in Software Quality Assurance
         </p>
         <div className="button-container">
-          <a href="#contact" className="button">
+          <a href="/contact" className="button">
             Contact Us
           </a>
         </div>

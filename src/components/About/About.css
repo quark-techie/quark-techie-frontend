@@ -1,115 +1,108 @@
 .about-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    padding: 6vw;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6vw;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  height: auto;
+  width: auto;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #000000, #202020);
+  backdrop-filter: blur(15px); /* Smoother blur effect */
+  color: #fff;
+  padding: 8rem 1rem;
+  border-radius: 50px;
+  border: #00cc66;
+  width: 130%;
+  position: relative;
+  animation: gradient 8s ease infinite;
+  transition: all 0.3s ease-in-out;
+}
+
+.about-text-container {
+  width: 45%;
+  margin-left: 2rem;
+  text-align: left;
+  color: #fffc3a;
+  overflow: hidden;
+}
+
+.about-image {
+  width: 45%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.about-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 300%;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6); /* Softened shadow */
+  text-align: left;
+}
+
+.about-text {
+  font-size: 120%;
+  line-height: 1.8;
+  color: #fff;
+}
+
+.about-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #00cc66;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-button:hover {
+  background-color: #fffc3a;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 720px) {
+  .about-container {
+    padding: 0;
+    margin-top: 2rem;
   }
-  
+
   .about-content {
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    background-color: black; /* Darkened background */
-    backdrop-filter: blur(15px); /* Increased blur for a smoother effect */
-    color: #fff;
-    padding: 14rem 14rem;
-    width: 130%;
-
-    transition: all 0.3s ease-in-out;
+    flex-direction: column;
+    padding: 8vw 5vw;
+    border-radius: 0%;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
-  
-  
+
   .about-text-container {
-    width: 50%;
-    right: 2.5%;
-    left: 2.5%;
+    width: 55%;
     text-align: left;
   }
-  
-  .about-title {
-    font-family: 'Roboto', sans-serif;
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6); /* Softened text shadow */
-    text-align: left;
-  }
-  
-  .about-text {
-    color: #fff;
-    font-size: 1.3rem;
-    line-height: 1.8;
 
+  .about-image-container {
+    max-width: 100%;
+    text-align: left;
   }
-  
-  .about-button {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    color: #fff;
-    background-color: #00cc66;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+
+  .about-title {
+    font-size: 300%;
+    white-space: nowrap;
+    overflow: visible;
+    text-align: center;
   }
-  
-  .about-button:hover {
-    background-color: #fffc3a;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+
+  .about-text {
+    font-size: 130%;
   }
-  
-  
-  @media (max-width: 768px) {
-    .about-container {
-      padding: 5vw;
-    }
-  
-    .about-content {
-      flex-direction: column;
-      padding: 8vw 5vw;
-    }
-  
-    .about-text-container {
-      max-width: 100%;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-  
-    .about-image-container {
-      max-width: 100%;
-      text-align: center;
-    }
-  
-    .about-title {
-      font-size: 2.3rem;
-    }
-  
-    .about-text {
-      font-size: 1.1rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .about-container {
-      padding: 7vw;
-    }
-  
-   
-    .about-title {
-      font-size: 2rem;
-    }
-  
-    .about-text {
-        position: relative;
-      font-size: 1rem;
-      left: 2px;
-      margin: 80%;
-    }
-  }
-  
+}
