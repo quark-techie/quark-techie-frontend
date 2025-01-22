@@ -1,23 +1,46 @@
-/* Slider Section */
+/* Slider Container */
 .slider-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   margin-top: 70px;
-  gap: 30px;
   width: 100%;
+  gap: 50px;
+  position: relative;
 }
 
+/* Buttons (Left & Right Arrows) */
+.slider-buttons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.slider-button {
+  background-color: transparent;
+  border: none;
+  font-size: 3rem;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.slider-button:hover {
+  color: #00cc66; /* Highlight the arrows on hover */
+  transform: scale(1.2);
+}
+
+/* Slider Content */
 .slider-content {
-  text-align: center;
   background: #f4f4f4;
-  padding: 30px; /* Ridotto per rendere il blocco più piccolo */
+  padding: 50px;
   border-radius: 12px;
-  width: 50%; /* Ridotto per fare il blocco più compatto */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+  width: 50%;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
   position: relative;
+  overflow: hidden;
 }
 
 .slider-number {
@@ -25,48 +48,47 @@
   top: -40px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 4rem; /* Ridotto per essere più piccolo */
+  font-size: 4rem;
   color: #333;
   font-weight: 700;
 }
 
 .slider-subtitle {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #555;
-  margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 .slider-text {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #777;
-  line-height: 1.6;
+  line-height: 1.7;
+  margin-top: 20px;
 }
 
-/* Positioning the static arrows */
-.slider-buttons {
-  position: absolute;
-  top: -50px; /* Distanza maggiore dalle frecce rispetto al numero */
+/* Left Button */
+.slider-buttons:first-child {
   left: 0;
+}
+
+/* Right Button */
+.slider-buttons:last-child {
   right: 0;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0 30px; /* Distanza tra le frecce */
 }
 
-.slider-button {
-  background-color: transparent; /* Rimuove lo sfondo */
-  border: none;
-  color: #333; /* Colore del testo della freccia */
-  padding: px; /* Ridotto per essere più piccolo */
-  font-size: 1.5rem; /* Ridotto per essere più piccolo */
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
+/* Responsiveness */
+@media (max-width: 768px) {
+  .slider-content {
+    width: 80%;
+  }
 
-.slider-button:hover {
-  transform: scale(1.1);
-  color: #00cc66;
+  .slider-number {
+    font-size: 3rem;
+  }
+
+  .slider-button {
+    font-size: 2rem;
+  }
 }
 
 /* Black Container for Working Process */

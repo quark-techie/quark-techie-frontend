@@ -75,10 +75,14 @@ const Working = () => {
 
       {/* Slider Section */}
       <div className="slider-container">
+        {/* Left Arrow */}
         <div className="slider-buttons">
-          <button className="slider-button" onClick={prevSlide}>&lt;</button>
+          <button className="slider-button" onClick={prevSlide}>
+            <span>&lt;</span>
+          </button>
         </div>
 
+        {/* Slider Content */}
         <div className="slider-content">
           <div className="slider-number">
             <span>{slides[currentIndex].title}</span>
@@ -87,8 +91,11 @@ const Working = () => {
           <p className="slider-text">{slides[currentIndex].text}</p>
         </div>
 
+        {/* Right Arrow */}
         <div className="slider-buttons">
-          <button className="slider-button" onClick={nextSlide}>&gt;</button>
+          <button className="slider-button" onClick={nextSlide}>
+            <span>&gt;</span>
+          </button>
         </div>
       </div>
     </div>
