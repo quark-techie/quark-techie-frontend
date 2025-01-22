@@ -11,10 +11,10 @@ const Footer = React.forwardRef((props, ref) => {
         </p>
         <div className="footer-icons">
           <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="footer-icon">
-            <img src="/path-to-icons/linkedin-icon.svg" alt="LinkedIn" />
+            <img src="/linkedin.png" alt="LinkedIn" />
           </a>
           <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="footer-icon">
-            <img src="/path-to-icons/github-icon.svg" alt="GitHub" />
+            <img src="/github.png" alt="GitHub" />
           </a>
           <a href="#!" className="footer-icon">
             <img src="/path-to-icons/placeholder-icon.svg" alt="Icona Vuota" />
