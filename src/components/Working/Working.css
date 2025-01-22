@@ -22,7 +22,7 @@
 .working-content {
   background-color: var(--bg-dark);
   color: #fff;
-  padding: 10rem 3rem;
+  padding: 10rem 35px;
   border-radius: 20px;
   box-shadow: 0 15px 30px var(--shadow-dark);
   text-align: center;
