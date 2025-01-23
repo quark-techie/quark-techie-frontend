@@ -12,18 +12,17 @@
 
 .services-content {
   border-radius: 40px; /* Maggiore border-radius */
-  margin-top: 50px;
+  margin-top: 50px; /*spazio dal top */
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: black; /* Gradiente verde */
-  color: #fff;
+  align-items:first baseline;
+  background: black; 
+  color: yellow;
   padding: 5rem 3rem;
   width: 100%;
-  text-align: center;
+  text-align: left;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); /* Ombra più morbida */
   transition: all 0.3s ease;
-  flex-direction: column;
+  flex-direction:column;
 }
 
 .services-title {
@@ -41,8 +40,6 @@
   color: #f4f4f4;
   margin-top: 10px; /* Distanza tra il titolo e il testo */
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 
