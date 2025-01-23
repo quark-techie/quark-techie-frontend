@@ -69,9 +69,9 @@ const Navbar = ({ scrollToFooter }) => {
             )}
           </li>
           <li>
-            <a href="#" onClick={handleContactClick} className="contact-link">
-              Contact
-            </a>
+          <NavLink to="/contact" activeClassName="active">
+                    Contact
+                  </NavLink>
           </li>
         </ul>
       </nav>
