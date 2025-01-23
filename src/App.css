@@ -97,3 +97,16 @@
     height: 50vmin; /* Logo più grande sui dispositivi desktop */
   }
 }
+
+/* Aggiungi questo nel tuo CSS */
+@font-face {
+  font-family: 'Sk-Modernist';
+  src: url('/Sk-Modernist-Regular.otf') format('otf'); /* Cambia il formato se necessario */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Usa il font nel tuo sito */
+body {
+  font-family: 'Sk-Modernist', sans-serif;
+}
