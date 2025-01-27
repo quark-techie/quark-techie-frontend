@@ -1,10 +1,26 @@
+
+/* Imposta il font per tutto il corpo */
+body {
+  font-family: 'Thunder', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Aggiungi il font Thunder alle classi specifiche */
+.home, .title, .subtitle, .impact-statement, .button {
+  font-family: 'Thunder', sans-serif, Arial, sans-serif;
+}
+
+/* Resto del CSS come prima */
 .home {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f7f7f7;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   overflow: hidden;
 }
 
@@ -25,7 +41,6 @@
 }
 
 .title {
-  font-family: 'Sk-Modernist', sans-serif;
   font-size: 6vw;
   font-weight: 700;
   line-height: 1.2;
@@ -35,7 +50,7 @@
 }
 
 .title .highlight {
-  color: #00cc66; 
+  color: #00cc66;
 }
 
 .subtitle {
@@ -43,6 +58,13 @@
   color: #333;
   font-size: 1.5vw;
   margin-top: 1rem;
+}
+
+.impact-statement {
+  font-size: 1.2vw;
+  color: #555;
+  font-style: italic;
+  margin-top: 2rem;
 }
 
 .button-container {
@@ -60,10 +82,26 @@
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
 }
 
 .button:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 204, 102, 0.7);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 8vw;
+  }
+  .subtitle {
+    font-size: 3vw;
+  }
+  .impact-statement {
+    font-size: 3vw;
+  }
+  .button {
+    font-size: 0.9rem;
+  }
 }
