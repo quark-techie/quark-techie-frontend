@@ -30,7 +30,7 @@
 .navbar-logo {
   position: relative;
   display: inline-block;
-  cursor: pointer;
+  cursor: pointer;  
   transition: transform 0.3s ease;
 }
 
@@ -201,8 +201,9 @@
   .navbar{
   border-radius: 0px;
   top: 0px;
-  position: fixed;
-  padding: 0.75rem 3.2rem;
+  position: relative;
+  padding: 0.75rem 3.5rem;
+  width: 100%;
   
   }
 .dropdown-menu{

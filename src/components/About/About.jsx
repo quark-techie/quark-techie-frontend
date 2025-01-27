@@ -1,8 +1,8 @@
 import React from 'react';
 import './About.css';
 
-
-const About = () => {
+  const About = () => {
+  
   return (
     <div>
     <div className="about-container">
@@ -23,11 +23,12 @@ const About = () => {
     <section className="why-quark-techie">
       <div className="container">
         <h2>Why Quark <font color="#00cc66">Techie</font> </h2>
-        <div>  
+        <div className='why-quark-techie-img-p'>  
         <p className='why-quark-techie-p'> <b> Are you looking for an efficient and reliable solution that allows you to achieve your goals without stress? For over 14 years Quark Techie has been helping customers like you achieve tangible results thanks to tailor-made, innovative and sustainable solutions. Don't wait any longer! Contact us today and find out how we can help you get what you want!</b></p>
-        
+        <img src="aboutimage.png" alt="" className='why-quark-techie-img'/>
         </div>
         <div className="why-choose-us__subsections">
+          
           <div className="subsection">
             <div className="subsection__icon">🔍</div>
             <h3>Experience</h3>
@@ -41,6 +42,7 @@ const About = () => {
             <p>We design tailored quality assurance strategies that align with your technological environment, needs, and goals.</p>
             <p><strong>Example:</strong> "We adapt our methodology to your development cycle, whether Agile, Waterfall, or hybrid."</p>
           </div>
+        
 
           <div className="subsection">
             <div className="subsection__icon">📞</div>
@@ -53,14 +55,8 @@ const About = () => {
             <div className="subsection__icon">💡</div>
             <h3>Commitment to Quality</h3>
             <p>We are passionate about software quality and dedicated to helping you achieve your goals.</p>
-          </div>
-
-          <div className="subsection">
-            <div className="subsection__icon">🏆</div>
-            <h3>Results-Driven</h3>
-            <p>We focus on outcomes, helping you improve software quality, reduce costs, and increase customer satisfaction.</p>
-          </div>
-        </div>
+        </div></div>
+      
       </div>
     </section>
     </div>
