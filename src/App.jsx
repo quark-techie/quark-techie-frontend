@@ -10,7 +10,6 @@ import NotFound from './components/pages/NotFound';
 import Footer from './components/Home/Footer/Footer';
 import ScrollToTop from './components/hooks/scrollToTop';
 import Contact from './components/Contact/Contact';
-
 const App = () => {
   const footerRef = useRef(null); // Crea un riferimento per il footer
 
