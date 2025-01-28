@@ -22,6 +22,8 @@ body {
   background-position: center;
   background-attachment: fixed;
   overflow: hidden;
+  margin-top: 80px;
+  margin-bottom: -100px;
 }
 
 .logo-background {

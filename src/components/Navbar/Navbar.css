@@ -1,15 +1,15 @@
 /* Navbar principale */
 .navbar {
   position: fixed;
-  top: 1rem;
+  top: 0rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
+  width: 94%;
   background: linear-gradient(90deg, #000000, #202020);
   color: white;
   padding: 10px 35px;
   border-radius: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   display: flex;
   justify-content: space-between;
@@ -17,6 +17,11 @@
   transition: all 0.3s ease-in-out;
   background-size: 400% 400%;
   animation: gradient 8s ease infinite;
+}
+
+/* Effetto hover sulla navbar */
+.navbar:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
 /* Animazione sfondo della navbar */
@@ -31,11 +36,12 @@
   position: relative;
   display: inline-block;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .navbar-logo:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
+  filter: brightness(1.2);
 }
 
 .navbar-logo img {
@@ -68,7 +74,7 @@
   color: white;
   font-size: 1rem;
   font-weight: bold;
-  padding: 10px 15px;
+  padding: 12px 18px;
   border-radius: 20px;
   position: relative;
   overflow: hidden;
@@ -76,11 +82,14 @@
   display: inline-block;
 }
 
+/* Effetto hover sui link */
 .navbar-links a:hover {
   transform: scale(1.05);
   color: #ffeb73;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Linea sotto al link */
 .navbar-links a::after {
   content: "";
   position: absolute;
@@ -96,14 +105,6 @@
   left: 0;
 }
 
-.navbar-links .active {
-  background-color: rgb(41, 41, 41);
-  color: #fff9f9;
-  font-weight: bolder;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transform: scale(1.1);
-}
-
 /* Dropdown menu */
 .dropdown {
   position: relative;
@@ -115,28 +116,46 @@
   color: white;
   font-size: 1rem;
   font-weight: bold;
-  padding: 10px 15px;
+  padding: 12px 20px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
+/* Hover sul bottone dropdown */
 .dropdown-btn:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   color: #ffeb73;
 }
 
+/* Menu a discesa */
 .dropdown-menu {
   list-style: none;
   background-color: #333;
   position: absolute;
   top: 100%;
   left: 0;
-  width: 200px;
+  width: 300px;
   padding: 10px 0;
   display: none;
   border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+/* Menu a discesa visibile */
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Link nel menu a discesa */
 .dropdown-menu li {
   text-align: center;
 }
@@ -144,84 +163,84 @@
 .dropdown-menu a {
   color: white;
   font-size: 1rem;
-  padding: 10px 15px;
+  padding: 12px 20px;
   display: block;
   text-decoration: none;
-  
+  transition: background-color 0.3s ease, padding 0.3s ease;
+  border-radius: 10px;
 }
 
-.dropdown-menu a:hover {
-  background-color: #444;
+/* Arrow che appare accanto al bottone del dropdown */
+.dropdown-btn::after {
+  content: "▼";
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
 }
 
-.dropdown:hover .dropdown-menu {
+/* Arrow ruotato quando il menu è aperto */
+.dropdown.open .dropdown-btn::after {
+  transform: rotate(180deg);
+}
+
+/* Modifica della visibilità del dropdown */
+.dropdown.open .dropdown-menu {
   display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hamburger Icon - animazione stilosa */
+.hamburger-menu {
+  display: none;
+}
+
+.hamburger-menu.open {
+  transform: rotate(90deg);
+}
+
+.hamburger-menu {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hamburger-menu.open {
+  transform: rotate(180deg);
 }
 
 /* Responsiveness per il menu mobile */
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
   .hamburger-menu {
     display: block;
-    cursor: pointer;
-    font-size: 30px;
-    color: lightgray;
   }
 
   .navbar-links {
     position: fixed;
     top: 3rem;
-    left: -100%; /* Nascondi il menu a sinistra */
+    left: -100%;
     height: 100%;
-    width: 250px; /* Larghezza del menu laterale */
-    transition: left 0.3s ease; /* Transizione per l'apertura */
+    width: 350px;
+    transition: left 0.3s ease;
     padding: 20px;
+    flex-direction: column; /* Per disporre i link in colonna */
   }
 
   .navbar-links.responsive {
-    left: 0; /* Mostra il menu quando è aperto */
+    left: 0;
   }
 
-  .navbar-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  .navbar-logo {
+    display: none;
   }
 
-  .navbar-logo
-  {display: none;}
   .overlay {
-    position: fixed  ;
+    position: fixed;
     top: 0;
     left: 0;
-    width:26%;
+    width: 70%;
     height: 100%;
-    background: rgba(0, 0, 0,1);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 999;
   }
-  .navbar{
-  border-radius: 0px;
-  top: 0px;
-  position: fixed;
-  padding: 0.75rem 3.2rem;
-  
-  }
-.dropdown-menu{
-  position: sticky;
-  background-color: transparent;
-  box-shadow: none;
-  left: -1rem;  
-  text-align: left;
-  max-width: 75%;
-}
-  
-  .dropdown-menu a:hover {
-    background-color: transparent;
- 
-
-}
-.navbar-links .active {
-  box-shadow: none;
-  max-width: 75%;
-}
-
 }

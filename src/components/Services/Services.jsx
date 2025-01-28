@@ -115,22 +115,27 @@ const Services = () => {
           {/* Aggiungere altre card per i tool */}
           <div className="tool-card" id="tool-card-5">
             <img src="/1.png" alt="Tool 5" className="tool-icon" />
-            <h3 className="tool-title">Tool 5</h3>
+            <h3 className="tool-title">Azure Devops</h3>
             <p className="tool-description">Tool description.</p>
           </div>
           <div className="tool-card" id="tool-card-6">
             <img src="/tools/2.png" alt="Tool 6" className="tool-icon" />
-            <h3 className="tool-title">Tool 6</h3>
+            <h3 className="tool-title">Postman</h3>
             <p className="tool-description">Tool description.</p>
           </div>
           <div className="tool-card" id="tool-card-7">
             <img src="/tools/3.png" alt="Tool 7" className="tool-icon" />
-            <h3 className="tool-title">Tool 7</h3>
+            <h3 className="tool-title">Atlassian</h3>
             <p className="tool-description">Tool description.</p>
           </div>
           <div className="tool-card" id="tool-card-8">
             <img src="/tools/4.png" alt="Tool 8" className="tool-icon" />
-            <h3 className="tool-title">Tool 8</h3>
+            <h3 className="tool-title">CI/CD Pipelines</h3>
+            <p className="tool-description">Tool description.</p>
+          </div>
+          <div className="tool-card" id="tool-card-8">
+            <img src="/tools/4.png" alt="Tool 8" className="tool-icon" />
+            <h3 className="tool-title">GIT</h3>
             <p className="tool-description">Tool description.</p>
           </div>
         </div>
