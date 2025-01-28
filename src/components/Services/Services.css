@@ -11,11 +11,11 @@
 }
 
 .services-content {
-  border-radius: 12px;
+  border-radius: 40px;
   margin-top: 50px;
   display: flex;
   align-items: flex-start;
-  background: #1e1e1e; /* Colore di sfondo più scuro ma elegante */
+  background: #000000; /* Colore di sfondo più scuro ma elegante */
   color: #fff;
   padding: 10rem 3.5rem;
   width: 100%;
@@ -84,7 +84,15 @@
 }
 
 .what-we-do-title {
-  margin-left: -380px;
+  margin-left: -840px;
+  font-size: 1rem; /* Più piccolo */
+  font-weight: 600;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.what-we-do-title2 {
+  margin-left: -780px;
   font-size: 1rem; /* Più piccolo */
   font-weight: 600;
   color: black;
@@ -92,10 +100,19 @@
 }
 
 .what-we-do-text {
-  font-size: 1.3rem; /* Più piccolo */
+  margin-left: -400px;
+  font-size: 1.5rem; /* Più piccolo */
   color: black;
   line-height: 1.7;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
+}
+
+.what-we-do-text2 {
+  margin-left: -115px;
+  font-size: 1.5rem; /* Più piccolo */
+  color: black;
+  line-height: 1.7;
+  margin-bottom: 80px;
 }
 
 /* Container per le service cards */
@@ -104,6 +121,7 @@
   grid-template-columns: repeat(2, 1fr); /* 2 carte per riga */
   gap: 20px; /* Distanza ridotta tra le carte */
   justify-items: center;
+  margin-bottom: 100px;
 }
 
 .service-card {
@@ -164,7 +182,7 @@
   flex-shrink: 0;
   width: calc(20% - 15px); /* 5 carte per riga */
   scroll-snap-align: start;
-  background-color: #043d1a;
+  background-color: #000000;
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   padding: 20px; /* Meno padding */
@@ -177,6 +195,7 @@
 }
 
 .tool-icon {
+  background-color: white;
   width: 70px; /* Icona più piccola */
   height: 70px;
   margin-bottom: 15px;
@@ -184,7 +203,7 @@
 
 .tool-title {
   font-size: 1.4rem; /* Titolo più piccolo */
-  color: #00cc66;
+  color: #8ACE00;
   margin-bottom: 12px;
 }
 

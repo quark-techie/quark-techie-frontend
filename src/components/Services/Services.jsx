@@ -79,9 +79,9 @@ const Services = () => {
         </div>
       </div>
       <div className="what-we-do-container">
-        <h2 className="what-we-do-title">Expertise in Leading Market Tools</h2>
-        <p className="what-we-do-text">
-          We adapt to the tools and frameworks that best fit your project’s needs, ensuring efficient and accurate testing.
+        <h2 className="what-we-do-title2">/ Tools & Frameworks /</h2>
+        <p className="what-we-do-text2">
+          We adapt to the tools and frameworks that best fit your project’s needs, <br />ensuring efficient and accurate testing.
         </p>
         <div className="tools-cards-container" ref={toolsRef} onTouchStart={handleSwipe} onTouchMove={handleSwipe}>
           <div className="tool-card" id="tool-card-1">
