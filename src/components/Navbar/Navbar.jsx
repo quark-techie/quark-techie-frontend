@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = ({ scrollToFooter }) => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const menuRef = useRef(null);
 
   const handleContactClick = (e) => {
     e.preventDefault();
@@ -19,20 +18,6 @@ const Navbar = ({ scrollToFooter }) => {
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
-
-  // Gestione del click fuori dal menu
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setMenuOpen(false); // Chiudi il menu se il click è fuori dal menu
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);  // Aggiungi l'evento al document
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);  // Rimuovi l'evento al momento della dismount
-    };
-  }, []);
 
   return (
     <>
@@ -48,7 +33,7 @@ const Navbar = ({ scrollToFooter }) => {
           &#9776;
         </div>
 
-        <ul className={`navbar-links ${isMenuOpen ? 'responsive' : ''}`} ref={menuRef}>
+        <ul className={`navbar-links ${isMenuOpen ? 'responsive' : ''}`}>
           <li>
             <NavLink exact to="/" activeClassName="active">
               Home
@@ -59,7 +44,7 @@ const Navbar = ({ scrollToFooter }) => {
               About
             </NavLink>
           </li>
-          <li className="dropdown">
+          <li className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
             <button onClick={toggleDropdown} className="dropdown-btn">
               Our Approach
             </button>
@@ -84,14 +69,14 @@ const Navbar = ({ scrollToFooter }) => {
             )}
           </li>
           <li>
-            <NavLink to="/contact" activeClassName="active" onClick={handleContactClick}>
+            <NavLink to="/contact" activeClassName="active">
               Contact
             </NavLink>
           </li>
         </ul>
       </nav>
 
-      {/* Overlay per il menu laterale */}
+      {/* Overlay for the mobile menu */}
       {isMenuOpen && <div className="overlay" onClick={toggleMenu}></div>}
     </>
   );

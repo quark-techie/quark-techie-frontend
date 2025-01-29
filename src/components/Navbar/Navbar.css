@@ -1,7 +1,7 @@
 /* Navbar principale */
 .navbar {
   position: fixed;
-  top: 0rem;
+  top: 1rem;
   left: 50%;
   transform: translateX(-50%);
   width: 94%;
@@ -9,7 +9,7 @@
   color: white;
   padding: 10px 35px;
   border-radius: 30px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   display: flex;
   justify-content: space-between;
@@ -17,11 +17,6 @@
   transition: all 0.3s ease-in-out;
   background-size: 400% 400%;
   animation: gradient 8s ease infinite;
-}
-
-/* Effetto hover sulla navbar */
-.navbar:hover {
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
 /* Animazione sfondo della navbar */
@@ -36,12 +31,11 @@
   position: relative;
   display: inline-block;
   cursor: pointer;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .navbar-logo:hover {
-  transform: scale(1.1);
-  filter: brightness(1.2);
+  transform: scale(1.2);
 }
 
 .navbar-logo img {
@@ -74,7 +68,7 @@
   color: white;
   font-size: 1rem;
   font-weight: bold;
-  padding: 12px 18px;
+  padding: 10px 15px;
   border-radius: 20px;
   position: relative;
   overflow: hidden;
@@ -82,14 +76,11 @@
   display: inline-block;
 }
 
-/* Effetto hover sui link */
 .navbar-links a:hover {
   transform: scale(1.05);
   color: #ffeb73;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Linea sotto al link */
 .navbar-links a::after {
   content: "";
   position: absolute;
@@ -105,6 +96,14 @@
   left: 0;
 }
 
+.navbar-links .active {
+  background-color: rgb(41, 41, 41);
+  color: #fff9f9;
+  font-weight: bolder;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
 /* Dropdown menu */
 .dropdown {
   position: relative;
@@ -116,46 +115,27 @@
   color: white;
   font-size: 1rem;
   font-weight: bold;
-  padding: 12px 20px;
+  padding: 10px 15px;
   cursor: pointer;
-  transition: transform 0.3s ease, color 0.3s ease;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
+  transition: transform 0.3s ease;
 }
 
-/* Hover sul bottone dropdown */
 .dropdown-btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
   color: #ffeb73;
 }
 
-/* Menu a discesa */
 .dropdown-menu {
   list-style: none;
   background-color: #333;
   position: absolute;
   top: 100%;
   left: 0;
-  width: 300px;
+  width: 200px;
   padding: 10px 0;
-  display: none;
   border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Menu a discesa visibile */
-.dropdown:hover .dropdown-menu {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Link nel menu a discesa */
 .dropdown-menu li {
   text-align: center;
 }
@@ -163,56 +143,22 @@
 .dropdown-menu a {
   color: white;
   font-size: 1rem;
-  padding: 12px 20px;
+  padding: 10px 15px;
   display: block;
   text-decoration: none;
-  transition: background-color 0.3s ease, padding 0.3s ease;
-  border-radius: 10px;
 }
 
-/* Arrow che appare accanto al bottone del dropdown */
-.dropdown-btn::after {
-  content: "▼";
-  font-size: 0.8rem;
-  transition: transform 0.3s ease;
-}
-
-/* Arrow ruotato quando il menu è aperto */
-.dropdown.open .dropdown-btn::after {
-  transform: rotate(180deg);
-}
-
-/* Modifica della visibilità del dropdown */
-.dropdown.open .dropdown-menu {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Hamburger Icon - animazione stilosa */
-.hamburger-menu {
-  display: none;
-}
-
-.hamburger-menu.open {
-  transform: rotate(90deg);
-}
-
-.hamburger-menu {
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.hamburger-menu.open {
-  transform: rotate(180deg);
+.dropdown-menu a:hover {
+  background-color: #444;
 }
 
 /* Responsiveness per il menu mobile */
-@media (max-width: 1000px) {
+@media (max-width: 1300px) {
   .hamburger-menu {
     display: block;
+    cursor: pointer;
+    font-size: 30px;
+    color: lightgray;
   }
 
   .navbar-links {
@@ -220,14 +166,19 @@
     top: 3rem;
     left: -100%;
     height: 100%;
-    width: 350px;
+    width: 250px;
     transition: left 0.3s ease;
     padding: 20px;
-    flex-direction: column; /* Per disporre i link in colonna */
   }
 
   .navbar-links.responsive {
     left: 0;
+  }
+
+  .navbar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .navbar-logo {
@@ -238,9 +189,34 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 70%;
+    width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
     z-index: 999;
+  }
+
+  .navbar {
+    border-radius: 0;
+    top: 0;
+    position: fixed;
+    padding: 0.75rem 3.2rem;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    background-color: transparent;
+    box-shadow: none;
+    left: 0;
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: transparent;
+  }
+
+  .navbar-links .active {
+    box-shadow: none;
+    max-width: 100%;
   }
 }

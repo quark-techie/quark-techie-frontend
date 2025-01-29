@@ -3,10 +3,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: rgb(255, 255, 255);
+    min-height: 100%;
+
     padding: 20px;
     overflow: hidden;
+    margin-top:10%
 }
 
 form {
