@@ -210,7 +210,7 @@
 }
 
 /* Responsiveness per il menu mobile */
-@media (max-width: 1300px) {
+@media (max-width: 1000px) {
   .hamburger-menu {
     display: block;
   }
