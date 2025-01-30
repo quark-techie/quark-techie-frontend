@@ -2,14 +2,9 @@ import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './Navbar.css';
 
-const Navbar = ({ scrollToFooter }) => {
+const Navbar = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
-
-  const handleContactClick = (e) => {
-    e.preventDefault();
-    scrollToFooter();
-  };
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
@@ -30,7 +25,7 @@ const Navbar = ({ scrollToFooter }) => {
 
         {/* Hamburger Icon */}
         <div className={`hamburger-menu ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
-          &#9776;
+          {isMenuOpen ? '✖' : '☰'}
         </div>
 
         <ul className={`navbar-links ${isMenuOpen ? 'responsive' : ''}`}>
@@ -46,7 +41,7 @@ const Navbar = ({ scrollToFooter }) => {
           </li>
           <li className={`dropdown ${isDropdownOpen ? 'open' : ''}`}>
             <button onClick={toggleDropdown} className="dropdown-btn">
-              Our Approach
+              Our Approach <span className="arrow">ᐁ</span>
             </button>
             {isDropdownOpen && (
               <ul className="dropdown-menu">
@@ -68,6 +63,7 @@ const Navbar = ({ scrollToFooter }) => {
               </ul>
             )}
           </li>
+          {/* Qui non è più necessario il handleContactClick */}
           <li>
             <NavLink to="/contact" activeClassName="active">
               Contact

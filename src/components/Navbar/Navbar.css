@@ -16,7 +16,6 @@
   align-items: center;
   transition: all 0.3s ease-in-out;
   background-size: 400% 400%;
-  animation: gradient 8s ease infinite;
 }
 
 /* Animazione sfondo della navbar */
@@ -63,6 +62,7 @@
   transition: transform 0.3s ease;
 }
 
+/* Effetto di sottolineatura per i link */
 .navbar-links a {
   text-decoration: none;
   color: white;
@@ -76,37 +76,37 @@
   display: inline-block;
 }
 
-.navbar-links a:hover {
-  transform: scale(1.05);
-  color: #ffeb73;
-}
-
 .navbar-links a::after {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 0%;
   height: 2px;
   background-color: #ffeb73;
   bottom: 0;
-  left: -100%;
+  left: 0;
   transition: all 0.3s ease;
 }
 
-.navbar-links a:hover::after {
-  left: 0;
+.navbar-links a:hover::after,
+.navbar-links .active::after {
+  width: 100%; /* Mostra la linea gialla su hover o quando selezionato */
 }
 
+/* Rimuovi lo sfondo grigio e lascia la linea gialla per i link attivi */
 .navbar-links .active {
-  background-color: rgb(41, 41, 41);
+  background-color: transparent;
   color: #fff9f9;
   font-weight: bolder;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transform: scale(1.1);
 }
 
 /* Dropdown menu */
 .dropdown {
   position: relative;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 .dropdown-btn {
@@ -117,23 +117,37 @@
   font-weight: bold;
   padding: 10px 15px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  position: relative;
+  transition: all 0.3s ease;
+  margin-top: -2.8px;
 }
 
-.dropdown-btn:hover {
-  transform: scale(1.2);
-  color: #ffeb73;
+.dropdown-btn::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #ffeb73;
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.dropdown-btn:hover::after {
+  width: 100%;
 }
 
 .dropdown-menu {
+  display: none;
   list-style: none;
-  background-color: #333;
+  background-color: black;
   position: absolute;
-  top: 100%;
-  left: 0;
-  width: 200px;
+  left: -20px;
+  width: 200px; /* Imposta una larghezza fissa */
   padding: 10px 0;
   border-radius: 10px;
+  box-shadow: none; /* Rimuovi eventuali effetti di ingrandimento */
+  transition: none; /* Disabilita eventuali transizioni */
 }
 
 .dropdown-menu li {
@@ -146,14 +160,39 @@
   padding: 10px 15px;
   display: block;
   text-decoration: none;
+  transform: none; /* Rimuovi ingrandimento sugli elementi */
 }
 
 .dropdown-menu a:hover {
   background-color: #444;
+  transform: none; /* Rimuovi ingrandimento sugli elementi */
+}
+
+.dropdown-menu .active a {
+  background-color: transparent;
+  color: #fff9f9;
+  font-weight: bolder;
+  transform: scale(1.1);
+}
+
+.dropdown-menu a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #ffeb73;
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu a:hover::after,
+.dropdown-menu .active a::after {
+  width: 100%;
 }
 
 /* Responsiveness per il menu mobile */
-@media (max-width: 1300px) {
+@media (max-width: 1200px) {
   .hamburger-menu {
     display: block;
     cursor: pointer;
@@ -164,11 +203,12 @@
   .navbar-links {
     position: fixed;
     top: 3rem;
-    left: -100%;
+    left: -150%;
     height: 100%;
     width: 250px;
     transition: left 0.3s ease;
-    padding: 20px;
+    padding: 30px;
+    background-color: transparent;
   }
 
   .navbar-links.responsive {
@@ -189,9 +229,9 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 40%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: black;
     z-index: 999;
   }
 
@@ -213,6 +253,7 @@
 
   .dropdown-menu a:hover {
     background-color: transparent;
+    transform: none; /* Rimuovi ingrandimento sugli elementi */
   }
 
   .navbar-links .active {
