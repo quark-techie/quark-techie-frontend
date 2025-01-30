@@ -55,6 +55,8 @@ import './About.css';
             <div className="subsection__icon">💡</div>
             <h3>Commitment to Quality</h3>
             <p>We are passionate about software quality and dedicated to helping you achieve your goals.</p>
+            
+            <p><strong>Example:</strong> We implement rigorous testing processes, from automated scripts to manual exploratory testing, ensuring your software meets the highest standards.</p>
         </div></div>
       
       </div>

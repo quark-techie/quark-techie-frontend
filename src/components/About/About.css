@@ -64,7 +64,7 @@
   margin-left: 3%;
 }
 .about-button:hover {
-  background-color: #fffc3a;
+
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
@@ -78,6 +78,7 @@
     padding: 8vw 5vw;
     border-radius: 0%;
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background-image: url("sea.jpg");
   }
   .about-text-container {
     width: 55%;
@@ -132,10 +133,24 @@ p{
     display: flex;
     height: 20%;}
   .subsection{
-    background-color: #fafafe;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;  /* Più angoli arrotondati per un look più morbido */
+    padding: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;  /* Necessario per l'effetto hover */
+    background: linear-gradient( 0deg,#fdfdfb , #eaf0e1);
+
+    }
+    @keyframes example {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 50% 100%;}
+      100% {background-position: 100% 0%;}
   
     }
-  
+  .subsection :hover{
+    transform: scale(1.005); 
+  }
   .why-choose-us__subsections{
     
     border-radius: 12px;

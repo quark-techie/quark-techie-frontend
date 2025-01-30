@@ -28,7 +28,7 @@ const OurFoundations = () => {
         <div className="about-text-container">
           <h1 className="about-title">Our Foundations</h1>
           <p className="about-text">
-            At Quark Techie, we are a team of professionals passionate about software quality. With over 14 years of industry experience, we help businesses like yours create flawless digital products.
+          Quark Techie is committed to delivering high-quality, stable, and reliable software, ensuring an intuitive and satisfying experience for users and clients. Excellence drives every decision, providing error-free solutions and continuous support.
           </p>
           </div>
           <div classname="about-image">
