@@ -140,7 +140,10 @@ p{
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     position: relative;  /* Necessario per l'effetto hover */
     background: linear-gradient( 0deg,#fdfdfb , #eaf0e1);
-
+  
+    }
+    .subsection:hover{
+      transform: scale(1.015);
     }
     @keyframes example {
       0% {background-position: 0% 50%;}
@@ -148,9 +151,8 @@ p{
       100% {background-position: 100% 0%;}
   
     }
-  .subsection :hover{
-    transform: scale(1.005); 
-  }
+ 
+
   .why-choose-us__subsections{
     
     border-radius: 12px;
