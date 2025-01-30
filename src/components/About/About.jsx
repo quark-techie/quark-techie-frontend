@@ -6,7 +6,7 @@ import './About.css';
   return (
     <div>
     <div className="about-container">
-      <div className="about-content">
+      <div className="about-content" >
         <div className="about-text-container">
           <h1 className="about-title">About Us</h1>
           <p className="about-text">

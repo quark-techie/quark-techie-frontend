@@ -75,7 +75,7 @@ const Working = () => {
           <p className="working-text">
             A holistic strategy managed by QA experts
           </p>
-          <a href="#contact" className="working-button">Contact Us</a>
+          <a href="/contact" className="working-button">Contact Us</a>
         </div>
       </div>
 

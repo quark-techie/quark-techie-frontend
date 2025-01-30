@@ -41,7 +41,7 @@ const Services = () => {
           <p className="services-text">
             Quality Assurance Services Tailored to Your Needs
           </p>
-          <button className="contact-button">Contact Us</button>
+          <a href="/contact"><button className="contact-button">Contact Us</button></a>
         </div>
       </div>
       <div className="what-we-do-container">
@@ -145,3 +145,6 @@ const Services = () => {
 };
 
 export default Services;
+
+
+

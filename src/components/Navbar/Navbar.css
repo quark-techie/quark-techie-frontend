@@ -62,7 +62,7 @@
   transition: transform 0.3s ease;
 }
 
-/* Effetto di sottolineatura per i link */
+/* Effetto per i link (ora diventeranno gialli) */
 .navbar-links a {
   text-decoration: none;
   color: white;
@@ -92,7 +92,6 @@
   width: 100%; /* Mostra la linea gialla su hover o quando selezionato */
 }
 
-/* Rimuovi lo sfondo grigio e lascia la linea gialla per i link attivi */
 .navbar-links .active {
   background-color: transparent;
   color: #fff9f9;
@@ -229,7 +228,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 35%;
+    width: 45%;
     height: 100%;
     background: black;
     z-index: 999;

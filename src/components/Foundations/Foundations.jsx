@@ -28,11 +28,15 @@ const OurFoundations = () => {
         <div className="about-text-container">
           <h1 className="about-title">Our Foundations</h1>
           <p className="about-text">
+<<<<<<< Updated upstream
           Quark Techie is committed to delivering high-quality, stable, and reliable software, ensuring an intuitive and satisfying experience for users and clients. Excellence drives every decision, providing error-free solutions and continuous support.
           </p>
+=======
+          Quark Techie is committed to delivering high-quality, stable, and reliable software, ensuring an intuitive and satisfying experience for users and clients. Excellence drives every decision, providing error-free solutions and continuous support.          </p>
+>>>>>>> Stashed changes
           </div>
           <div classname="about-image">
-          <a href="#contact" className="about-button">
+          <a href="/contact" className="about-button">
             Let's Build Together
           </a>
         </div>
