@@ -21,7 +21,11 @@
 /* Working Process Section */
 .working-content {
   background-color: var(--bg-dark);
-  color: #fff;
+  background-image: url("./relaxed.png");
+  background-size: cover;
+  background-position: center center; /* Centra l'immagine */
+  position: relative; /* Necessario per posizionare un overlay sopra */
+  color: #ffffff;
   padding: 10rem 35px;
   border-radius: 20px;
   box-shadow: 0 15px 30px var(--shadow-dark);
@@ -29,8 +33,11 @@
   width: 100%;
 }
 
+
+
 .working-title {
   font-family: 'Roboto', sans-serif;
+  color: #7bf1b6;
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 20px;
@@ -41,6 +48,7 @@
   font-size: 1.3rem;
   color: var(--text-light);
   line-height: 1.8;
+  color: white;
   margin-bottom: 25px;
 }
 
@@ -60,6 +68,18 @@
   background-color: var(--secondary-color);
   transform: translateY(-5px);
   box-shadow: 0 10px 25px var(--shadow-dark);
+}
+
+.working-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Overlay scuro */
+  border-radius: 20px;
+  z-index: 2; /* Posiziona l'overlay dietro il contenuto */
 }
 
 .working-grid {
