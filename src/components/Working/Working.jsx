@@ -6,7 +6,7 @@ const Working = () => {
   const slides = [
     { id: 1, title: '01', subtitle: 'Consulting', text: 'We analyze your needs and advise you on the best quality assurance strategies.' },
     { id: 2, title: '02', subtitle: 'Assessment', text: 'We evaluate your software’s current state and identify areas for improvement.' },
-    { id: 3, title: '03', subtitle: 'Defining KPIs and Metrics', text: 'We establish key performance indicators to measure testing success.' },
+    { id: 3, title: '03', subtitle: 'Defining KPIs and Metrics', text: 'We establish key performance indicators to measure testing ⠀⠀⠀⠀⠀⠀⠀⠀success.⠀⠀⠀⠀⠀⠀' },
     { id: 4, title: '04', subtitle: 'Process Modeling', text: 'We help in defining the process structure to ensure a smooth development flow.' },
     { id: 5, title: '05', subtitle: 'Coaching', text: 'We train teams on quality practices to ensure long-term results and knowledge sharing.' },
     { id: 6, title: '06', subtitle: 'Continuous Improvement', text: 'We emphasize continuous improvement across all stages of development to ensure ongoing success.' },

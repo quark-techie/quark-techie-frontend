@@ -86,7 +86,7 @@ const Navbar = () => {
               <ul className="dropdown-menu">
                 <li>
                   <NavLink to="/Services" activeClassName="active">
-                    Our Services
+                  Our Services⠀⠀⠀
                   </NavLink>
                 </li>
                 <li>
@@ -96,7 +96,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <NavLink to="/working-process" activeClassName="active">
-                    Working Process
+                  Working Process
                   </NavLink>
                 </li>
               </ul>

@@ -5,7 +5,7 @@ const Services = () => {
   const [showDetails, setShowDetails] = useState(false);
   const detailsRef = useRef(null);
   const toolsRef = useRef(null);
-  
+
   const handleShowDetails = () => {
     setShowDetails(true);
   };
@@ -88,55 +88,64 @@ const Services = () => {
             <img src="/selenium.png" alt="Selenium" className="tool-icon" />
             <h3 className="tool-title">Selenium</h3>
             <p className="tool-description">
-              We use Selenium to automate your web application testing, ensuring complete coverage and fast execution.
+              We automate web app testing with Selenium for complete coverage and fast execution.
             </p>
           </div>
           <div className="tool-card" id="tool-card-2">
             <img src="/cypress.png" alt="Cypress" className="tool-icon" />
             <h3 className="tool-title">Cypress</h3>
             <p className="tool-description">
-              Ideal for end-to-end testing, Cypress provides a seamless way to ensure quality across your web applications.
+              Cypress offers end-to-end testing, ensuring seamless quality across web apps.
             </p>
           </div>
           <div className="tool-card" id="tool-card-3">
             <img src="/jmeter.png" alt="JMeter" className="tool-icon" />
             <h3 className="tool-title">JMeter</h3>
             <p className="tool-description">
-              We leverage JMeter for performance testing, ensuring your application can handle high traffic and usage.
+              JMeter is used for performance testing, ensuring apps handle high traffic smoothly.
             </p>
           </div>
           <div className="tool-card" id="tool-card-4">
             <img src="/cucumber.png" alt="Cucumber" className="tool-icon" />
             <h3 className="tool-title">Cucumber</h3>
             <p className="tool-description">
-              Using Cucumber, we enable behavior-driven development to align testing with your business goals.
+              Cucumber supports behavior-driven development to align testing with business goals.
             </p>
           </div>
-          {/* Aggiungere altre card per i tool */}
           <div className="tool-card" id="tool-card-5">
-            <img src="/1.png" alt="Tool 5" className="tool-icon" />
-            <h3 className="tool-title">Azure Devops</h3>
-            <p className="tool-description">Tool description.</p>
+            <img src="/1.png" alt="Azure DevOps" className="tool-icon" />
+            <h3 className="tool-title">Azure DevOps</h3>
+            <p className="tool-description">
+              Azure DevOps provides tools for building, deploying, and testing apps, including CI/CD.
+            </p>
           </div>
           <div className="tool-card" id="tool-card-6">
-            <img src="/tools/2.png" alt="Tool 6" className="tool-icon" />
+            <img src="/tools/2.png" alt="Postman" className="tool-icon" />
             <h3 className="tool-title">Postman</h3>
-            <p className="tool-description">Tool description.</p>
+            <p className="tool-description">
+              Postman helps automate and test API workflows for reliable API performance.
+            </p>
           </div>
           <div className="tool-card" id="tool-card-7">
-            <img src="/tools/3.png" alt="Tool 7" className="tool-icon" />
+            <img src="/tools/3.png" alt="Atlassian" className="tool-icon" />
             <h3 className="tool-title">Atlassian</h3>
-            <p className="tool-description">Tool description.</p>
+            <p className="tool-description">
+              Atlassian's tools like Jira and Confluence improve collaboration and streamline testing.
+            </p>
           </div>
           <div className="tool-card" id="tool-card-8">
-            <img src="/tools/4.png" alt="Tool 8" className="tool-icon" />
+            <img src="/tools/4.png" alt="CI/CD Pipelines" className="tool-icon" />
             <h3 className="tool-title">CI/CD Pipelines</h3>
-            <p className="tool-description">Tool description.</p>
+            <p className="tool-description">
+              CI/CD pipelines automate integration and deployment, enabling faster releases.
+            </p>
           </div>
-          <div className="tool-card" id="tool-card-8">
-            <img src="/tools/4.png" alt="Tool 8" className="tool-icon" />
+          <div className="tool-card" id="tool-card-9">
+            <img src="/tools/5.png" alt="GIT" className="tool-icon" />
             <h3 className="tool-title">GIT</h3>
-            <p className="tool-description">Tool description.</p>
+            <p className="tool-description">
+              Git tracks code changes and supports collaboration for smooth project development.
+            </p>
           </div>
         </div>
       </div>
@@ -145,6 +154,3 @@ const Services = () => {
 };
 
 export default Services;
-
-
-
