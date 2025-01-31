@@ -15,14 +15,14 @@
   background: linear-gradient(90deg, #000000, #202020);
   backdrop-filter: blur(15px); /* Smoother blur effect */
   color: #fff;
-  padding: 6rem 70px;
+  padding: 4.2rem 70px;
   border-radius: 50px;
   border: #00cc66;
   width: 130%;
-  position: relative;
-  animation: gradient 8s ease infinite;
-  transition: all 0.3s ease-in-out;
+
   display: inline;
+  background-image: url(sea.jpg);
+  background-size: cover;
 }
 .about-text-container {
   width: 45%;
@@ -45,10 +45,11 @@
   text-align: left;
 }
 .about-text {
-  font-size: 120%;
-  line-height: 1.8;
+  font-size: 150%;
+  line-height: 1.2;
   color: #fff;
   text-align: left;
+  background-color: rgba(0,0,0,0.1.5);
 }
 .about-button {
   display: inline-block;

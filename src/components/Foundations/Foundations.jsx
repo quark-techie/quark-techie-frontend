@@ -23,16 +23,16 @@ const OurFoundations = () => {
 
   return (
     <div>
-    <div className="about-container">
-      <div className="about-content">
-        <div className="about-text-container">
-          <h1 className="about-title">Our Foundations</h1>
-          <p className="about-text">
+    <div className="foundations-container">
+      <div className="foundations-content">
+        <div className="foundations-text-container">
+          <h1 className="foundations-title">Our Foundations</h1>
+          <p className="foundations-text">
           Quark Techie is committed to delivering high-quality, stable, and reliable software, ensuring an intuitive and satisfying experience for users and clients. Excellence drives every decision, providing error-free solutions and continuous support.
           </p>
           </div>
-          <div classname="about-image">
-          <a href="/contact" className="about-button">
+          <div classname="foundations-image">
+          <a href="/contact" className="foundations-button">
             Let's Build Together
           </a>
         </div>

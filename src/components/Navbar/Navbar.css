@@ -132,7 +132,7 @@
 }
 
 .dropdown-btn:hover::after {
-  width: 90%;
+  width: 100%;
 }
 
 .dropdown-menu {
@@ -161,27 +161,17 @@
   text-decoration: none;
 }
 
-
+/* Modifica per ridurre la lunghezza della linea gialla sia durante hover che quando selezionato */
 .dropdown-menu .active a {
   background-color: transparent;
   color: #fff9f9;
   font-weight: bolder;
-}
-
-.dropdown-menu a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background-color: #ffeb73;
-  bottom: 0;
-  left: 0;
-  transition: all 0.3s ease;
+  width: 100%;
 }
 
 .dropdown-menu a:hover::after,
 .dropdown-menu .active a::after {
-  width: 90%;
+  width: 50%; /* Modifica la percentuale a tuo piacimento */
 }
 
 /* Responsiveness per il menu mobile */
@@ -229,6 +219,7 @@
   }
 
   .navbar {
+    width: 100%;
     border-radius: 0;
     top: 0;
     position: fixed;

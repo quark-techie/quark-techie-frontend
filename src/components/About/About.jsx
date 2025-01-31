@@ -22,7 +22,7 @@ import './About.css';
     </div>
     <section className="why-quark-techie">
       <div className="container">
-        <h2>Why Quark <font color="#00cc66">Techie</font> </h2>
+        <h2>Why Quark <font color="#567b7">Techie</font> </h2>
         <div className='why-quark-techie-img-p'>  
         <p className='why-quark-techie-p'> <b> Are you looking for an efficient and reliable solution that allows you to achieve your goals without stress? For over 14 years Quark Techie has been helping customers like you achieve tangible results thanks to tailor-made, innovative and sustainable solutions. Don't wait any longer! Contact us today and find out how we can help you get what you want!</b></p>
         <img src="aboutimage.png" alt="" className='why-quark-techie-img'/>
